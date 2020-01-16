@@ -1,0 +1,722 @@
+@include font-face(RenoMono, $path: "./fonts/");
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: RenoMono;
+  @include tile(lines-down-a, purple, 5px);
+  background-attachment: fixed;
+  counter-reset: counter;
+}
+
+a {
+  transition: all $transition ease-out;
+  color: $color-1;
+  text-decoration: underline;
+
+  &:hover {
+    color: $color-2;
+  }
+}
+
+.title {
+  width: 60%;
+  padding-top: 17px;
+}
+
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
+  color: $color-1;
+}
+
+h1 {
+  @media screen and (max-width: map-get($grid-breakpoints, sm)) {
+    font-size: 40px;
+    margin-left: 10px;
+  }
+
+  @media screen and (min-width: map-get($grid-breakpoints, sm)) {
+    font-size: 70px;
+  }
+
+  @include highlight($spacing: 30px, $top: 10px, $bottom: 0px);
+  width: 40%;
+  line-height: 100%;
+}
+
+h2 {
+  font-size: 30px;
+  @include highlight($spacing: 0, $top: 10px, $bottom: 0px);
+}
+
+h3 {
+  font-size: 25px;
+  @include highlight($spacing: 20px, $top: 10px, $bottom: 0px);
+}
+
+p {
+  @include highlight($spacing: 20px, $top: 7px, $bottom: 3px);
+}
+
+.reveal-trigger {
+  @media screen and (min-width: map-get($grid-breakpoints, sm)) {
+    displaY: none;
+  }
+
+  position: fixed;
+  padding: 5px 20px;
+  max-height: $frame;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  font-size: 15px;
+  background-color: #fff;
+  text-transform: uppercase;
+  z-index: 1200;
+  @include transition;
+
+  &:before {
+    content: "view ";
+
+  }
+
+  body.reveal & {
+    left: $menu;
+
+    &:before {
+      content: "hide ";
+
+    }
+  }
+
+}
+
+
+.container {
+  display: grid;
+  grid-template-columns: $menu 1fr;
+
+  @include transition(margin-left);
+
+  @media screen and (min-width: map-get($grid-breakpoints, sm)) {
+
+    grid-gap: 20px;
+  }
+
+  @media screen and (max-width: map-get($grid-breakpoints, sm)) {
+    margin: 0;
+    padding: 0;
+    margin-left: -$menu;
+    grid-template-columns: $menu 100vw;
+  }
+
+  body.reveal & {
+    margin-left: 0;
+  }
+
+
+
+}
+
+aside.sidebar {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr ($social + $frame);
+
+  @media screen and (min-width: map-get($grid-breakpoints, sm)) {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+  }
+
+  @media screen and (max-width: map-get($grid-breakpoints, sm)) {
+    // width: 100%;
+    // z-index: 100;
+    // margin-lefT: -20px;
+    // padding: $frame 20px;
+    // position: fixed;
+    // @include tile(lines-down-a, purple, 5px);
+    // background-attachment: fixed;
+    // background-color: white;
+  }
+
+
+  .description {
+    color: $color-1;
+    font-size: 18px;
+    line-height: 120%;
+    margin-right: 40%;
+    margin-bottom: 0;
+    padding-left: 10px;
+    @include highlight($spacing: 0px, $top: 7px, $bottom: 5px);
+
+    &:after {
+      display: none;
+    }
+
+    .home & {
+      display: none;
+    }
+  }
+
+  .scroll {
+    @media screen and (min-width: map-get($grid-breakpoints, sm)) {
+      overflow-y: auto;
+      overflow-x: hidden;
+      padding-top: $frame;
+    }
+  }
+}
+
+.wow {
+  @include fade(0, 50px, 0, $delay: 100ms);
+}
+
+article.main {
+  padding: ($frame - 9px) 0 $frame 0;
+  margin-bottom: 20px;
+
+  @media screen and (max-width: map-get($grid-breakpoints, sm)) {
+
+    padding: ($frame + 10px) 20px;
+  }
+
+  ul,
+  ol {
+    margin-bottom: 40px;
+
+    li {
+      @include highlight($spacing: 15px, $top: 5px, $bottom: 5px);
+
+      .description {
+        margin-bottom: 0 !important;
+
+        &:after {
+          display: none;
+        }
+      }
+
+      a {
+        text-transform: uppercase;
+        @include highlight($spacing: 0, $top: 5px, $bottom: 5px);
+      }
+    }
+  }
+
+  img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+nav#navigation {
+  padding-top: 20px !important;
+}
+
+.item {
+  button[data-toggle='collapse'] {
+    text-transform: uppercase;
+    border: none;
+    margin-bottom: 5px;
+    background-color: #fff;
+    color: $color-1;
+    font-size: 25px;
+
+    &:after {
+      content: '-';
+      display: inline-block;
+      text-decoration: none;
+      font-size: 20px;
+      padding: 10px 0 0 10px;
+    }
+
+    &.collapsed:after {
+      content: '+';
+    }
+
+
+
+
+    padding-left: 10px;
+    text-decoration: underline;
+    transition: all $transition ease-out;
+
+
+
+
+    &:hover {
+      color: $color-2;
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 10px;
+
+    li {
+      margin-top: 10px;
+
+      &.divider {
+        border-bottom: solid 1px white;
+        margin: 10px 0;
+        padding: 0;
+        margin-left: -10px;
+      }
+
+      &.previous {
+        font-size: 12px;
+      }
+
+
+    }
+
+    a,
+    p {
+      @include highlight($spacing: 10px, $top: 7px, $bottom: 5px);
+      text-transform: uppercase;
+
+      margin: 0;
+
+      &:after {
+        display: none;
+      }
+    }
+  }
+}
+
+.next {
+  span {
+    text-transform: uppercase;
+
+    &.slogan {
+      margin-left: 10px;
+    }
+  }
+
+}
+
+.latest a {
+  opacity: $opacity;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.next {
+  span {
+    opacity: $opacity;
+
+  }
+
+  &:hover span {
+    opacity: 1;
+  }
+}
+
+.latest a,
+.next {
+
+
+
+
+  &,
+  &:hover {
+    text-decoration: none;
+  }
+
+  span {
+    display: inline-block;
+    font-size: 12px;
+    @include highlight($spacing: 0px, $top: 5px, $bottom: 3px);
+    @include transition;
+
+    &.main {
+      font-size: 25px;
+      margin-bottom: 0;
+      @include highlight($spacing: 0, $top: 10px, $bottom: 3px);
+    }
+
+    &.slogan {
+      margin-top: -10px;
+    }
+  }
+
+  &:hover {
+    span {
+      color: black;
+    }
+  }
+
+}
+
+header.brand {
+  @media screen and (max-width: map-get($grid-breakpoints, sm)) {
+    margin-top: $frame;
+  }
+
+  a.logo {
+    background-color: #fff;
+    padding: 0 15px 15px 5px;
+    margin-bottom: 20px;
+    display: inline-block;
+    transition: all $transition ease-out;
+
+    svg {
+      width: 80px;
+      height: 80px;
+
+      path {
+        fill: $color-1;
+      }
+    }
+
+    &:hover svg path {
+      fill: $color-2;
+    }
+  }
+}
+
+#study {
+  p {
+    text-transform: uppercase;
+    font-size: 14px;
+    padding-left: 10px;
+
+    &.current a {
+      display: block;
+    }
+  }
+}
+
+ul.social {
+  margin: 0;
+  padding: 0;
+  margin-top: 20px;
+  list-style: none;
+
+  a {
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 0 5px 0 10px;
+    font-size: 14px;
+    @include transition;
+    background-color: #fff;
+  }
+}
+
+.next,
+.cover {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  @include transition;
+}
+
+
+.home {
+  .subtitle {
+    p {
+      @include highlight($spacing: 5px, $top: 10px, $bottom: 5px);
+      line-height: 120%;
+      font-size: 40px;
+      color: $color-1;
+      text-transform: uppercase;
+    }
+  }
+
+  footer.footer {
+    display: none;
+
+
+  }
+}
+
+.cover {
+
+
+  aside.sidebar & {
+    padding: 10px;
+    padding-top: 15px;
+
+    @media screen and (min-width: map-get($grid-breakpoints, sm)) {
+      margin-left: -10px;
+      margin-right: 10px;
+    }
+  }
+
+  article.main & {
+    padding: 30px;
+    margin-bottom: 40px;
+
+    @media screen and (min-width: map-get($grid-breakpoints, xl)) {
+      padding-right: 60%;
+    }
+
+    @media screen and (min-width: map-get($grid-breakpoints, sm)) {
+      @include scaffold;
+    }
+
+    @media screen and (max-width: map-get($grid-breakpoints, sm)) {
+      @include scaffold($left: -30px);
+    }
+
+    &,
+    &::before {
+      height: 200px;
+    }
+  }
+}
+
+.instructions {
+  .home & {
+    margin-top: 40px;
+
+    h3 {
+      font-size: 15px;
+      @include highlight($top: 10px, $bottom: 5px);
+    }
+
+  }
+
+  @media screen and (min-width: map-get($grid-breakpoints, lg)) {
+    grid-template-columns: 1fr 1fr 1fr;
+
+    .home & {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
+
+      &>a {
+        margin-top: 0px;
+
+        &:nth-of-type(1) {
+          grid-area: 1 / 1 / 2 / 7;
+        }
+
+        &:nth-of-type(2) {
+          grid-area: 2 / 1 / 3 / 4;
+        }
+
+        &:nth-of-type(3) {
+          grid-area: 2 / 4 / 3 / 7;
+        }
+
+        &:nth-of-type(4) {
+          grid-area: 3 / 1 / 4 / 3;
+        }
+
+        &:nth-of-type(5) {
+          grid-area: 3 / 3 / 4 / 5;
+        }
+
+        &:nth-of-type(6) {
+          grid-area: 3 / 5 / 4 / 7;
+        }
+      }
+    }
+  }
+
+}
+
+.instructions,
+footer.footer {
+  @media screen and (min-width: map-get($grid-breakpoints, lg)) {
+    display: grid;
+    margin-left: -10px;
+  }
+
+
+
+
+
+  &>* {
+    @media screen and (max-width: map-get($grid-breakpoints, lg)) {
+      margin-top: 30px;
+      display: block;
+      padding: 0 10px;
+    }
+
+    @media screen and (min-width: map-get($grid-breakpoints, lg)) {
+      margin-top: 20px;
+      padding: 20px;
+      padding-top: 0;
+      background-color: #fff;
+    }
+
+    border-left: 10px solid $color-1;
+
+    p {
+      &:after {
+        height: 10px;
+      }
+
+      &:last-of-type {
+        margin-bottom: 0;
+
+        &:after {
+          display: none;
+        }
+      }
+    }
+
+  }
+
+  &>section,
+  &>a {
+    &:hover {
+      h3 {
+        color: $color-1;
+        filter: drop-shadow(3px 3px 0px rgba(black, 0.2));
+      }
+    }
+  }
+
+  h3 {
+    color: black;
+    filter: drop-shadow(5px 5px 0px rgba(black, 0.05));
+    @include highlight(white, $top: 15px);
+    margin-left: 10px;
+    @include transition;
+  }
+
+
+
+  p {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+}
+
+footer.footer {
+  @media screen and (min-width: map-get($grid-breakpoints, sm)) {
+    grid-template-columns: 2fr 1fr;
+  }
+
+}
+
+
+.reverse {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+section.session {
+  counter-increment: counter;
+
+  @media screen and (min-width: map-get($grid-breakpoints, sm)) {
+    grid-template-columns: 100px 1fr;
+    display: grid;
+    grid-gap: 30px;
+    margin-left: -10px;
+  }
+
+  margin: 100px 0;
+
+  .syllabus {
+    @include reset(all);
+    @include reset(list);
+
+    li {
+      text-transform: uppercase;
+
+      &.title {
+        font-size: 25px;
+        @include highlight($spacing: 10px, $top: 10px, $bottom: 5px);
+        color: $color-1;
+      }
+
+      &.agenda {
+        font-size: 20px;
+        @include highlight($spacing: 0, $top: 10px, $bottom: 5px);
+      }
+
+
+      &.meeting {
+        margin-top: -20px !important;
+      }
+
+      &.description {
+
+        p {
+          text-transform: none;
+        }
+      }
+
+      &.meeting,
+      &.place {
+        font-size: 14px;
+      }
+
+      &.links {
+        @include highlight($spacing: 20px, $top: 5px, $bottom: 5px);
+
+        ul {
+          margin-top: 20px;
+        }
+
+        li {
+          text-transform: none;
+
+          a {
+            text-transform: uppercase;
+            display: block;
+            @include highlight($spacing: 0, $top: 5px, $bottom: 5px);
+          }
+
+        }
+
+      }
+
+      &.place,
+      &.action {
+        @include highlight($spacing: 20px, $top: 10px, $bottom: 5px);
+      }
+    }
+  }
+}
+
+.counter {
+  background-color: $color-1;
+  color: white;
+  font-size: 100px;
+  text-align: center;
+  margin-top: -3px;
+  height: 100px;
+
+  @media screen and (max-width: map-get($grid-breakpoints, sm)) {
+    width: 100px;
+    display: inline-block;
+    margin-bottom: 40px;
+  }
+
+  line-height: 120%;
+
+  &:before {
+    display: block;
+    content: counter(counter);
+  }
+}
+
+article.main {
+  ul, ol {
+    li a::after {
+      display: none;
+    }
+  } 
+} 
+// no social fix
+
+aside.sidebar {
+  grid-template-rows: 1fr 0;
+
+  .social {
+    display: none;
+  }
+}

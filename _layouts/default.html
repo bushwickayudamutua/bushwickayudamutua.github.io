@@ -1,0 +1,65 @@
+---
+layout: default
+---
+<html>
+{% include head.html %}
+
+<body class="{%- if page.categories -%}{{ page.categories }}{%- endif -%}" id="{%- if page.status -%}{{ page.status }}{%- endif -%}">
+	<div class="container">
+		<aside class="sidebar wow">
+			<div class="scroll">
+				<header class="brand">
+					<a href="/" class="logo">
+						{% include icons/logo.svg %}
+					</a>
+				</header>
+				<p class="description">Decolonize<br>Your<br>Attention</p>
+				{% include navigation.html %}
+			</div>
+
+			<!-- <ul class="social">
+				<li><a href="#">Join our newsletter</a></li>
+				<li><a href="#">Become our patreon</a></li>
+				<li><a href="#">follow our instagram</a></li>
+			</ul> -->
+		</aside>
+		<article class="main">
+			{%- if page.title -%}
+			<div class="title wow">
+				<h1>{{ page.title }}</h1>
+			</div>
+			{%- endif -%}
+			{%- if page.cover -%}
+			<div class="cover wow" style="background-image: url(/assets/images/{{ page.cover }})">
+				{%- if page.description -%}
+				<h2>{{ page.description }}</h2>
+				{%- endif -%}
+			</div>
+			{%- endif -%}
+				{{ content }}
+
+			{% include footer.html %}
+		</article>
+
+
+
+	</div>
+	<a href="JavaScript:Void(0);" onclick="
+    $('body').toggleClass('reveal')" class="reveal-trigger">menu</a>
+	<script src="{{'/assets/vendor/jquery.min.js' | prepend: site.baseurl}}"></script>
+	<script src="{{'/assets/vendor/popper.min.js' | prepend: site.baseurl}}"></script>
+	<script src="{{'/assets/vendor/bootstrap.min.js' | prepend: site.baseurl}}"></script>
+	<script src="{{'/assets/vendor/wow.min.js' | prepend: site.baseurl}}"></script>
+	<script>
+		$(function () {
+			$('[data-toggle="tooltip"]').tooltip()
+		});
+		new WOW().init();
+		// $(function () {
+		// 	$('section.session').addClass('wow');
+		// });
+
+	</script>
+</body>
+
+</html>

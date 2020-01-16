@@ -1,0 +1,33 @@
+---
+layout: default
+title: praxis
+categories: home
+---
+<div class="subtitle wow">
+  <p>Decolonize<br>
+    Your<br>
+    Attention</p>
+</div>
+<div class="instructions">
+  {% for post in site.categories.study %}
+  {% if post.status contains "redirect" %}
+  {% else %}
+  <a class="next wow" href="{{ post.url }}" class="latest cover"
+    style="background-image: url(/assets/images/{{ post.cover}})">
+    <h3>Study:</h3>
+    <span class="main">{{ post.title }}</span>
+    <span class="slogan">{{ post.description }}</span>
+  </a>
+  {% endif %}
+  {% endfor %}
+  {% for post in site.categories.article %}
+  {% if post.status contains "published" %}
+  <a class="next wow" href="{{ post.url }}" class="latest cover"
+    style="background-image: url(/assets/images/{{ post.cover }})">
+    <h3>Article:</h3>
+    <span class="main">{{ post.title }}</span>
+    <span class="slogan">{{ post.description }}</span>
+  </a>
+  {% endif %}
+  {% endfor %}
+</div>

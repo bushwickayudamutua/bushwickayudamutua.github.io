@@ -1,0 +1,83 @@
+.event {
+  display: grid;
+  margin: 80px 0;
+  grid-template-columns: 3fr 1fr;
+  grid-column-gap: 20px;
+  border-left: solid 10px $color-1;
+  margin-left: -10px;
+
+  @media screen and (max-width: map-get($grid-breakpoints, xl)) {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  @media screen and (max-width: map-get($grid-breakpoints, lg)) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (max-width: map-get($grid-breakpoints, md)) {
+    display: block;
+  }
+
+  p.place {
+    text-transform: uppercase;
+    color: $color-1;
+    margin-left: 10px;
+
+    &:after {
+      display: none;
+    }
+  }
+
+  .content {
+    margin-left: 10px;
+    margin-top: 5px;
+
+    p {
+
+      span {
+        text-transform: uppercase;
+        color: $color-1;
+
+        &.title {
+          font-size: 30px;
+          @include highlight($spacing: 0px, $top: 9px, $bottom: 3px);
+          line-height: 120%;
+        }
+      }
+
+      &:last-of-type {
+
+        &:after {
+          display: none;
+        }
+      }
+    }
+
+
+  }
+
+
+
+
+  footer {
+
+    @media screen and (max-width: map-get($grid-breakpoints, md)) {
+      border-top: 1px solid white;
+      padding-top: 20px;
+    }
+
+    .btn {
+      display: block;
+      margin-bottom: 5px;
+
+      &:first-of-type {
+        margin-top: 20px;
+      }
+
+      @media screen and (max-width: map-get($grid-breakpoints, md)) {
+        margin-left: 10px;
+      }
+
+    }
+  }
+}
