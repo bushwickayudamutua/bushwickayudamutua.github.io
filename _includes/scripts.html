@@ -1,0 +1,16 @@
+	<script src="{{'/assets/vendor/jquery.min.js' | prepend: site.baseurl}}"></script>
+	<script src="{{'/assets/vendor/popper.min.js' | prepend: site.baseurl}}"></script>
+	<script src="{{'/assets/vendor/bootstrap.min.js' | prepend: site.baseurl}}"></script>
+	<script>
+		$(function () {
+			$('[data-toggle="tooltip"]').tooltip()
+		});
+			new WOW({
+                      boxClass:     'wow',      // default
+                      animateClass: 'animated', // default
+                      offset:       0,          // default
+                      mobile:       true,       // default
+                      live:         true        // default
+                    }
+			).init();
+	</script>
