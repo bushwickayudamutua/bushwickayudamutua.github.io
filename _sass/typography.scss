@@ -1,0 +1,22 @@
+@mixin font-face($title, $file: $title, $weight: normal, $style: normal, $stretch: normal, $transform: normal, $path: "../fonts") {
+  @font-face {
+    font-family: #{$title};
+    src: url("#{$path}#{$file}.eot");
+    src: url("#{$path}#{$file}.eot?#iefix") format("embedded-opentype"), url("#{$path}#{$file}.woff") format("woff"), url("#{$path}#{$file}.ttf") format("truetype"), url("#{$path}#{$file}.svg##{$title}") format("svg");
+    font-weight: $weight;
+    font-style: $style;
+    font-stretch: $stretch;
+    text-transform: transform;
+  }
+  @media screen and (-webkit-min-device-pixel-ratio: 0) {
+    @font-face {
+      font-family: $title;
+      src: url("#{$path}#{$file}.svg##{$title}") format("svg");
+    }
+  }
+}
+
+@include font-face(Standard-Book, OpenSans-Regular, normal, normal);
+@include font-face(Standard-Book, OpenSans-Italic, normal, italic);
+@include font-face(Standard-Book, OpenSans-Semibold, bold, normal);
+@include font-face(Standard-Book, OpenSans-SemiboldItalic, bold, italic);

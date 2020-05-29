@@ -5,6 +5,9 @@ layout: default
 {% include head.html %}
 <body class="{%- if page.categories -%}{{ page.categories }}{%- endif -%}" id="{%- if page.status -%}{{ page.status }}{%- endif -%}">
 	<div class="container">
+		<nav>
+			<div class="logo">{% include logos/ayudamutua.svg %}</div>
+		</nav>
 		<article class="main">
 				{{ content }}
 		</article>
