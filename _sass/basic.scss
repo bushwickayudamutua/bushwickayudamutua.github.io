@@ -1,4 +1,4 @@
-@mixin font-face($title, $file: $title, $weight: normal, $style: normal, $stretch: normal, $transform: normal, $path: "../fonts") {
+@mixin font-face($title, $file: $title, $weight: normal, $style: normal, $stretch: normal, $transform: normal, $path: "../assets/fonts/") {
   @font-face {
     font-family: #{$title};
     src: url("#{$path}#{$file}.eot");
@@ -16,7 +16,10 @@
   }
 }
 
-@include font-face(Standard-Book, OpenSans-Regular, normal, normal);
-@include font-face(Standard-Book, OpenSans-Italic, normal, italic);
-@include font-face(Standard-Book, OpenSans-Semibold, bold, normal);
-@include font-face(Standard-Book, OpenSans-SemiboldItalic, bold, italic);
+@include font-face(standard-book, standard-book, normal, normal);
+@include font-face(standard-book, standard-book-italic, normal, italic);
+@include font-face(standard-book, standard-bold, bold, normal);
+@include font-face(standard-book, standard-bolditalic, bold, italic);
+
+$color-1: #FF6E2E;
+$color-2: #AECEE6;
