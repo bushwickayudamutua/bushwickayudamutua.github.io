@@ -2,17 +2,30 @@
 	@include fadeInUp;
 }
 
+$gap: 30px;
+$logo: 120px;
+
 .logo svg {
-	width: 200px;
-	height: 200px;
+	width: 100%;
+}
+
+.logo {
+	position: sticky;
+	top: $gap;
 }
 
 body {
 	font-family: standard-book;
 }
+.title {
 
+}
 .container {
-	width: 600px;
+	width: 700px;
+	display: grid;
+	padding: $gap;
+grid-gap: $gap;
+grid-template-columns: $logo 1fr;
 }
 
 h1 {
