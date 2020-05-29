@@ -9,6 +9,7 @@ $logo: 120px;
 	width: 100%;
 }
 
+
 .logo {
 	position: sticky;
 	top: $gap;
@@ -17,9 +18,7 @@ $logo: 120px;
 body {
 	font-family: standard-book;
 }
-.title {
 
-}
 .container {
 	width: 700px;
 	display: grid;
@@ -27,7 +26,46 @@ body {
 grid-gap: $gap;
 grid-template-columns: $logo 1fr;
 }
+section {
+	margin-top: $gap;
+	padding-top: $gap;
+	border-top: dotted 2px $color-2;
+}
+section.help {
+	width: 100%;
+	display: grid;
+grid-gap: $gap;
+grid-template-columns: 1fr 1fr 1fr;
+.btn {
+	background-color: $color-1;
+	padding: 5px $gap;
+	text-align: center;
+	displaY: block;
+}
+h3 {
+	font-size: 20px;
+	color: $color-1;
+	&.es {
+		  font-style: italic;
+		  color: $color-2;
+	}
+}
+}
 
-h1 {
-	font-weight: bold;
+.highlight {
+	@extend h4;
+	padding: ($gap * 2);
+	color: $color-1;
+	  font-style: italic;
+}
+
+.sig {
+	text-align: center;
+	margin-bottom: $gap;
+	svg {
+	width: ($gap * 2);
+	height: ($gap * 2);
+
+
+}
 }
