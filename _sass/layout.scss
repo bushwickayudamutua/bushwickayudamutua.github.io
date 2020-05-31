@@ -1,110 +1,169 @@
-.wow {
-	@include fadeInUp;
-}
+// .wow {
+// 	@include fadeInUp;
+// }
 
 $gap: 30px;
 $logo: 150px;
 $breakpoint: 800px;
+$delay: 400ms;
+
 
 .logo svg {
-	@media (min-width: $breakpoint) {
-	width: 100%;
-}
-	@media (max-width: $breakpoint) {
-	width: 100px;	
-	height: 100px;
 
-}
+	@media (min-width: $breakpoint) {
+		width: 100%;
+	}
+	@media (max-width: $breakpoint) {
+		width: $logo;	
+		height: $logo;
+
+	}
+
 }
 
 
 .logo {
-	@media (min-width: $breakpoint) {
-	position: sticky;
-	top: $gap;
-}
+	transition: all $delay ease-out;
+	@include fadeInDown;
+	&:hover {
+		transform: rotate(-10deg);
+	}
+
 	display: block;
-		@media (max-width: $breakpoint) {
-text-align: center;
-padding-top: $gap;
+	@media (max-width: $breakpoint) {
+		text-align: center;
+		padding-top: $gap;
+
+	}
 
 }
+
+a:not(.btn):not(.logo) {
+	color: darken($color-2, 30%);
+	border-bottom: dotted 1px darken($color-2, 30%);
+	transition: all $delay ease-out;
+	&, &:hover {
+		text-decoration: none;
+	}
+	&:hover {
+		color: $color-1;
+		border-bottom: solid 1px $color-1;
+	}
 }
 
 body {
 	font-family: standard-book;
 }
 
+article.main {
+	@include fadeInDown($delay: ($delay * 2));
+	padding: $gap 0;
+	@media (max-width: $breakpoint) {
+		padding-top: 0;
+	}
+}
+
 .container {
 
-@media (min-width: $breakpoint) {
+	@media (min-width: $breakpoint) {
 		width: 700px;
-	display: grid;
-	padding: $gap;
-grid-gap: $gap;
-grid-template-columns: $logo 1fr;
-	
-}
+		display: grid;
+		grid-gap: $gap;
+		grid-template-columns: $logo 1fr;
+
+	}
 }
 section {
 	margin-top: $gap;
 	padding-top: $gap;
 	border-top: dotted 2px $color-2;
 }
-		@media (max-width: $breakpoint) {
-			h1 {
-					margin-top: $gap;
-	padding-top: $gap;
-	border-top: dotted 2px $color-2;
-			}
-			}
+@media (max-width: $breakpoint) {
+	h1 {
+		padding-top: $gap;
+		border-top: dotted 2px $color-2;
+	}
+}
 section.help .grid {
 	display: grid;
-grid-gap: ($gap / 2);
-grid-template-columns: 1fr 1fr 1fr;
-.btn {
-	background-color: $color-2;
-	padding: 5px;
-	text-align: center;
-	displaY: block;
-	font-size: 15px;
-	font-weight: bold;
-	box-shadow: 0 4px 0px rgba(0, 0, 0, 0.1);
-transition: all 300ms ease-out;
-border-radius: 0;
-	&:hover {
-		box-shadow: 0 2px 0px rgba(0, 0, 0, 0.1);
-		background-color: $color-1;
+	grid-gap: ($gap / 2);
+	grid-template-columns: 1fr 1fr 1fr;
+	.btn {
+		background-color: $color-2;
+		padding: 5px;
+		text-align: center;
+		displaY: block;
+		font-size: 15px;
+		font-weight: bold;
+		box-shadow: 0 4px 0px rgba(0, 0, 0, 0.1);
+		transition: all $delay ease-out;
+		border-radius: 0;
+		&:hover {
+			box-shadow: 0 2px 0px rgba(0, 0, 0, 0.1);
+			background-color: $color-1;
 
+		}
 	}
-}
-h3 {
-	font-size: 15px;
-	line-height: 100%;
-	&.es {
-		  font-style: italic;
+	h3 {
+		font-size: 15px;
+		line-height: 100%;
+		&.es {
+			font-style: italic;
 
-		padding-bottom: ($gap / 2);
+			padding-bottom: ($gap / 2);
+		}
 	}
-}
 }
 
 .highlight {
-margin-top: $gap;
+	margin-top: $gap;
 	@extend h4;
 	color: $color-1;
-	  font-style: italic;
+	font-style: italic;
 }
 
 .sig {
 
 	text-align: center;
 	svg {
-	width: ($gap * 2);
-	height: ($gap * 2);
-	@media (max-width: $breakpoint) {
+		width: ($gap * 2);
+		height: ($gap * 2);
+		@media (max-width: $breakpoint) {
 			width: ($gap * 1.5);
-	height: ($gap * 1.5);
+			height: ($gap * 1.5);
+		}
 	}
 }
+
+
+sidebar {
+
+	@media (min-width: $breakpoint) {
+		height: 100vh;
+		position: sticky;
+		top: -1;
+		padding: $gap 0;
+		display: grid;
+		grid-template-rows: $logo 1fr;
+		grid-gap: $gap;
+		nav {
+			align-self: end;
+		}
+	}
+	nav {
+		ul {
+			@include fadeInDown($delay: $delay);
+			padding-left: 0;
+			   list-style: none;
+			@media (max-width: $breakpoint) {
+				text-align: center;
+				li {
+					display: inline-block;
+					margin-top: ($gap / 2);
+					margin-left: 5px;
+				}
+			}
+		}
+	}
+
 }
