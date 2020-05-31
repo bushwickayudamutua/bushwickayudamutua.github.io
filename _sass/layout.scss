@@ -9,7 +9,7 @@ $delay: 400ms;
 
 
 .logo svg {
-
+	transition: all $delay ease-out;
 	@media (min-width: $breakpoint) {
 		width: 100%;
 	}
@@ -24,8 +24,8 @@ $delay: 400ms;
 
 .logo {
 	transition: all $delay ease-out;
-	@include fadeInDown;
-	&:hover {
+	&:hover svg {
+		
 		transform: rotate(-10deg);
 	}
 
@@ -56,7 +56,7 @@ body {
 }
 
 article.main {
-	@include fadeInDown($delay: ($delay * 2));
+	@include fadeInDown($delay: $delay);
 	padding: $gap 0;
 	@media (max-width: $breakpoint) {
 		padding-top: 0;
@@ -137,7 +137,7 @@ section.help .grid {
 
 
 sidebar {
-
+	@include fadeInDown;
 	@media (min-width: $breakpoint) {
 		height: 100vh;
 		position: sticky;
@@ -152,7 +152,6 @@ sidebar {
 	}
 	nav {
 		ul {
-			@include fadeInDown($delay: $delay);
 			padding-left: 0;
 			   list-style: none;
 			@media (max-width: $breakpoint) {
