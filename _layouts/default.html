@@ -9,6 +9,18 @@ layout: default
 		<sidebar>
 			<a href="/" class="logo">{% include logos/BAM.svg %}</a>
 <nav>
+	<h3>internal links</h3>
+	<ul>
+  {% for post in site.posts %}
+       {% if post.status contains "public" %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+         {% endif %}
+  {% endfor %}
+		
+	</ul>
+	<h3>social media links</h3>
 	<ul>
 		<li><a href="https://www.facebook.com/bushwickayuda/" target="_blank">Facebook</a></li>
 		<li><a href="https://twitter.com/BushwickAyuda" target="_blank">Twitter</a></li>
@@ -18,6 +30,12 @@ layout: default
 </nav>
 		</sidebar>
 		<article class="main">
+				{%- if page.title -%}
+				<h1>{{ page.title }}</h1>
+			{%- endif -%}
+				{%- if page.description -%}
+				<h2>{{ page.description }}</h2>
+			{%- endif -%}
 			{{content}}
 		</article>
 	</div>

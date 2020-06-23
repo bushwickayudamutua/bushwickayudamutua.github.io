@@ -10,8 +10,8 @@ When it's running, go to [https://localhost:4000](https://localhost:4000) on you
 
 ### TODO
 
-- [ ] Def start with `_config.yml`
-- [ ] Change favicons
-- [ ] Design `_layouts/template.html`
-- [ ] Design `_sass/layout.scss`
-- [ ] Create new pages on `_posts`
+- [ ] Check favicons
+- [x] titles on template
+- [x] article loop on template
+- [ ] social media, better loop
+- [ ] actual footer
