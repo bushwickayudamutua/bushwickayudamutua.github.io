@@ -3,23 +3,10 @@ layout: default
 ---
 <html>
 {% include head.html %}
-<body class="{%- if page.categories -%}{{ page.categories }}{%- endif -%}" id="{%- if page.status -%}{{ page.status }}{%- endif -%}">
-	<div class="container">
-
-		<sidebar>
-			<a href="/" class="logo">{% include logos/BAM.svg %}</a>
-<nav>
-	<ul>
-		<li><a href="https://www.facebook.com/bushwickayuda/" target="_blank">Facebook</a></li>
-		<li><a href="https://twitter.com/BushwickAyuda" target="_blank">Twitter</a></li>
-		<li><a href="https://instagram.com/bushwickayudamutua" target="_blank">Instagram</a></li>
-		<li><a href="mailto:bushwickayudamutua@gmail.com">Email</a></li>
-	</ul>
-</nav>
-		</sidebar>
-		<article class="main">
-			{{content}}
-		</article>
+<!-- <body class="{%- if page.categories -%}{{ page.categories }}{%- endif -%}" id="{%- if page.status -%}{{ page.status }}{%- endif -%}"> -->
+<body>
+	<main id="content">
+		{{content}}
 	</div>
 	{% include scripts.html %}
 </body>

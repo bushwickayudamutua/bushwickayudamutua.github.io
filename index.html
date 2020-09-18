@@ -1,43 +1,180 @@
 ---
-layout: default
 title: Bushwick Ayuda Mutua
+layout: default
 categories: home
 ---
-			<h1>{{site.title}}</h1>
 
-			<section class="about">
-				<p>We're a grassroots community group that connects neighbors in the Bushwick area of Brooklyn affected by the Covid-19 pandemic to organizations and volunteers in the area that are able to relieve them where the government has not yet been able to.</p>
-			</section>
-<section class="help">
-	{% include help.html %}
-</section>
+<!-- <h1>{{site.title}}</h1> -->
+	<nav class="navbar navbar-expand-lg sticky-top bg-transparent">
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			{% include logoSVG.html %}
+			<ul class="navbar-nav m-auto">
+				<li class="nav-item active">
+				  	<a class="nav-link" href="#">About</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Volunteer</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Request Assistance</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Donate</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
 
-			<section class="mission">
-				<h2>Mission</h2>
-				<p>Bushwick Ayuda Mutua is a grassroots, volunteer-led network of volunteers working collaboratively and connecting neighbors to respond to the needs of Bushwick neighbors during this time of crisis, including groceries deliveries, PPE and mask distribution, medicine and other supplies to those impacted by Covid-19 with an emphasis on vulnerable communities, elders, undocumented people, low-income families with children and those sick or positive to Covid-19. </p>
+	<div class="parallax-bg">
+		<div class="circle blue"></div>
+		<div class="circle orange"></div>
+	</div>
 
-				<p>We serve Bushwick community through neighbor-to-neighbor and mass bulk deliveries. Our work is possible thanks to mutual aid grassroots donations, as well in partnership with community based organizations, elected officials and groups such as MayDay Space, Hungry Monk, Latinos Unidos, and others.</p>
-			</section> 
+	<div class="d-lg-flex">
+		<div class="container d-lg-flex align-items-lg-center min-height-100" id="header_pane">
+			<div class="content-container">
+				<div class="title">Bushwick</br>Ayuda Mutua</div>
+				<div class="subtitle pt-4 pb-4">
+					<span>We are a collective group of Bushwick residents, long-term residents and recent arrivals, rooted in the mission of creating a local network for neighbors to support neighbors.</span>
+				</div>
+				<div class="learn-more link">
+					<span>Learn More</span>
+				</div>
+			</div>
+		</div>
+	</div>
 
-			<section class="vision">
-				<h2>Vision</h2>
+	{% include neighbors.html %}
 
-				<p>Bushwick Ayuda Mutua works towards ensuring that residents of our community have their most basic needs met, as well access to resources and information to thrive during Covid-19 and beyond. </p>
+	<div class="container" style="padding-bottom:5rem;">
+		<div class="comment-text network">
+			A network of Bushwick neighbors supporting neighbors.
+		</div>
+	</div>
 
+	<!-- Carousel-->
+	<div class="carousel-container">
+		<div id="pics_carousel" class="owl-carousel owl-theme">
+			<div class="item">
+				<div class="item-bg"></div>
+				<div class="img-container">
+					<img src="https://picsum.photos/500/415">
+				</div>
+			</div>
+			<div class="item">
+				<div class="item-bg"></div>
+				<div class="img-container">
+					<img src="https://picsum.photos/500/415">
+				</div>
+			</div>
+			<div class="item">
+				<div class="item-bg"></div>
+				<div class="img-container">
+					<img src="https://picsum.photos/500/415">
+				</div>
+			</div>
+			<div class="item">
+				<div class="item-bg"></div>
+				<div class="img-container">
+					<img src="https://picsum.photos/500/415">
+				</div>
+			</div>
+		</div>
+	</div>
 
-				<p>We aspire to live in a community where no one lives in hunger, when people have access to livable wages, affordable and safe housing and health care so every person and family can live autonomous and empowered lives. </p>
+	<div class="requests">
+		<div class="container request pt-5 pb-5">
+			<div class="logo"></div>
+			<div class="text-container">
+				<div class="title pb-3">Sign up to <span class="underline">volunteer</span></div>
+				<p class="text pb-3">We are always looking for more neighbors to support our mission. From on-site food handling to connecting with folks in need of assistance, PR, awareness building, fundraising, finance, and tech, tell us about you and how you can help.</p>
+				<div class="link">Get Involved</div>
+			</div>
+		</div>
 
+		<div class="container request pt-5 pb-5">
+			<div class="logo"></div>
+			<div class="text-container">
+				<div class="title pb-3">Get <span class="underline">assistance</span></div>
+				<p class="text pb-3">We offer food assistance and access to essential items like feminine products, soap, diapers, and baby food. We make referrals to organizations we trust can support you in legal support, housing assistance, medical assistance, and more.</p>
+				<div class="link">Request help</div>
+			</div>
+		</div>
+	</div>
 
-				<p>BAM is a space for us to create frameworks within Bushwick for us to sustainably take care of and empower each other, and to promote accessibility in ways our community members were left without before and during the COVID-19 crisis</p>
-			</section>
+	{% include neighbors.html %}
 
-<section class="highlight">
-	<p>While we strive for autonomy, we can only achieve this together</p>
-				<div class="sig">{% include logos/ayudamutua2.svg %}</div>
-</section>
+	<!-- Carousel-->
+	<div class="t-carousel-container">
+		<div id="testimony_carousel" class="owl-carousel owl-theme">
+			<div class="item container">
+				<div class="text-container">
+					<div class="text">
+						Bushwick Ayuda Mutua has been such an amazing, wonderful organization to work with during this crazy COVID-19 pandemic. I don’t know what I would do without them!
+					</div>
+					<div class="person">
+						Dwayne Johson
+					</div>
+				</div>
+			</div>
 
+			<div class="item container">
+				<div class="text-container">
+					<div class="text">
+						Bushwick Ayuda Mutua has been such an amazing, wonderful organization to work with during this crazy COVID-19 pandemic. I don’t know what I would do without them!
+					</div>
+					<div class="person">
+						Dwayne Johson
+					</div>
+				</div>
+			</div>
 
+			<div class="item container">
+				<div class="text-container">
+					<div class="text">
+						Bushwick Ayuda Mutua has been such an amazing, wonderful organization to work with during this crazy COVID-19 pandemic. I don’t know what I would do without them!
+					</div>
+					<div class="person">
+						Dwayne Johson
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
+	<div id="footer">
+		<div class="container align-items-lg-center">
+			<div class="content-container">
+				<div class="subtitle pt-4 pb-4">
+					<span>
+						Want to support our mission?
+					</span>
+				</div>
+				<div class="title">Donate to Bushwick Ayuda Mutua</div>
+				<div class="donate-container">
+					<div class="donate">
+						<span>Donate</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer-inner">
+			<div class="d-lg-flex justify-content-between">
+				<div class="d-lg-flex links-container">
+					<span>2020 BAM. All Rights Reserved</span>
+					<span>Privacy Policy</span>
+					<span>Tech & Data Policy</span>
+				</div>
+
+				<div class="d-lg-flex links-container">
+					<span>Twitter</span>
+					<span>Instagram</span>
+					<span>Facebook</span>
+				</div>
+			</div>
+		</div>
+	</div>
 <!-- 
 <ol>
 {% for post in site.posts %}
