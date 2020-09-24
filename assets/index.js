@@ -1,0 +1,81 @@
+$(document).ready(function(){
+    //BG Hover animation
+    $(window).on('mousemove', function(event) {
+        const blueCircle = $('.circle.blue');
+        const orangeCircle = $('.circle.orange');
+        
+        const x = (window.innerWidth - event.clientX)/2;
+        const y = (window.innerHeight - event.clientY)/2;
+
+        blueCircle.css('transform', `translateX(${x}px) translateY(${y}px) skew(70deg, 78deg)`);
+        orangeCircle.css('transform', `translateX(${x}px) translateY(${y}px) skew(70deg, 78deg)`);
+    });
+
+    //Neighbors scroll animation
+    $(window).on('scroll', function(event) {
+        console.log(window.pageYOffset);
+
+        $.each($('#neighbors_ticker .item'), (i, value) => {
+            $(value).css('transform', `translateX(-${window.pageYOffset}px) translateY(0)`);
+        })
+    });
+
+    //Picture carousel
+    $('#pics_carousel').owlCarousel({
+        loop:true,
+        lazyLoad:true,
+        margin:10,
+        responsiveClass:true,
+        nav: false,
+        responsive:{
+            0:{
+                items:1,
+            },
+            600:{
+                items:3,
+            },
+            1000:{
+                items:3,
+                loop:false
+            }
+        }
+    });
+
+    //Testimony Carousel
+    $('#testimony_carousel').owlCarousel({
+        items: 1,
+        nav: false,
+        loop: true,
+        center: true,
+        startPosition: 1,
+        dots: false,
+        responsive:{
+            0:{
+                stagePadding: 0
+            },
+            600:{
+                stagePadding: 0
+            },
+            1500:{
+                stagePadding: 325
+            }
+        }
+    });
+
+    //English/Spanish toggle
+    $('.eng.lang-btn').on('click', () => {
+        $('.span.lang-btn').removeClass('active');
+        $('.lang-btn.eng').addClass('active');
+        
+        $('.lang-text.span').removeClass('active');
+        $('.lang-text.eng').addClass('active');
+    });
+
+    $('.span.lang-btn').on('click', () => {
+        $('.lang-btn.eng').removeClass('active');
+        $('.span.lang-btn').addClass('active');
+
+        $('.lang-text.eng').removeClass('active');
+        $('.lang-text.span').addClass('active');
+    })
+});

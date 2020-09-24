@@ -22,6 +22,15 @@ categories: home
 					<a class="nav-link" href="#">Donate</a>
 				</li>
 			</ul>
+
+			<div class="eng-span-container">
+				<div class="eng lang-btn active">
+					EN
+				</div>
+				<div class="span lang-btn">
+					ES
+				</div>
+			</div>
 		</div>
 	</nav>
 
@@ -35,10 +44,12 @@ categories: home
 			<div class="content-container">
 				<div class="title">Bushwick</br>Ayuda Mutua</div>
 				<div class="subtitle pt-4 pb-4">
-					<span>We are a collective group of Bushwick residents, long-term residents and recent arrivals, rooted in the mission of creating a local network for neighbors to support neighbors.</span>
+					<span class="eng lang-text active">We are a collective group of Bushwick residents, long-term residents and recent arrivals, rooted in the mission of creating a local network for neighbors to support neighbors.</span>
+					<span class="span lang-text">Spanish Test</span>
 				</div>
 				<div class="learn-more link">
-					<span>Learn More</span>
+					<span class="eng lang-text active">Learn More</span>
+					<span class="span lang-text">Spanish tbd</span>
 				</div>
 			</div>
 		</div>
@@ -46,9 +57,12 @@ categories: home
 
 	{% include neighbors.html %}
 
-	<div class="container" style="padding-bottom:5rem;">
-		<div class="comment-text network">
-			A network of Bushwick neighbors supporting neighbors.
+	<div id="network_pane">
+		<div class="container network" style="padding-bottom:5rem;">
+			<div class="comment-text network">
+				<span class="eng lang-text active">A network of Bushwick neighbors supporting neighbors.</span>
+				<span class="span lang-text">Spanish tbd</span>
+			</div>
 		</div>
 	</div>
 
@@ -82,9 +96,13 @@ categories: home
 		</div>
 	</div>
 
-	<div class="requests">
+
+	<!-- Requests -->
+	<div class="requests" style="margin-bottom:150px;">
 		<div class="container request pt-5 pb-5">
-			<div class="logo"></div>
+			<div class="logo">
+				<img src="/assets/images/globe.svg"/>
+			</div>
 			<div class="text-container">
 				<div class="title pb-3">Sign up to <span class="underline">volunteer</span></div>
 				<p class="text pb-3">We are always looking for more neighbors to support our mission. From on-site food handling to connecting with folks in need of assistance, PR, awareness building, fundraising, finance, and tech, tell us about you and how you can help.</p>
@@ -93,7 +111,9 @@ categories: home
 		</div>
 
 		<div class="container request pt-5 pb-5">
-			<div class="logo"></div>
+			<div class="logo">
+				<img src="/assets/images/hands.svg"/>
+			</div>
 			<div class="text-container">
 				<div class="title pb-3">Get <span class="underline">assistance</span></div>
 				<p class="text pb-3">We offer food assistance and access to essential items like feminine products, soap, diapers, and baby food. We make referrals to organizations we trust can support you in legal support, housing assistance, medical assistance, and more.</p>
@@ -143,6 +163,7 @@ categories: home
 	</div>
 
 	<div id="footer">
+		<img class="pointing-img" src="/assets/images/pointing.svg"/>
 		<div class="container align-items-lg-center">
 			<div class="content-container">
 				<div class="subtitle pt-4 pb-4">

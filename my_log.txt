@@ -20,3 +20,5 @@ I, [2020-09-17T11:18:23.032832 #359]  INFO -- : #<Airtable::Table:0x00007fffc11a
 I, [2020-09-17T11:23:02.988406 #384]  INFO -- : #<Airtable::Table:0x00007fffe9b4e268 @api_key="key5BWaBb5FCx5sjD", @app_token="appu6bc56WwPum78l", @worksheet_name="tblkwwvVoKTcuLqvV">
 I, [2020-09-18T11:36:18.107999 #103]  INFO -- : #<Airtable::Table:0x00007fffc210e888 @api_key="key5BWaBb5FCx5sjD", @app_token="appu6bc56WwPum78l", @worksheet_name="tblkwwvVoKTcuLqvV">
 I, [2020-09-18T12:22:59.530711 #245]  INFO -- : #<Airtable::Table:0x00007fffe08f69b0 @api_key="key5BWaBb5FCx5sjD", @app_token="appu6bc56WwPum78l", @worksheet_name="tblkwwvVoKTcuLqvV">
+I, [2020-09-18T17:53:52.980445 #501]  INFO -- : #<Airtable::Table:0x00007fffd99ce2e0 @api_key="key5BWaBb5FCx5sjD", @app_token="appu6bc56WwPum78l", @worksheet_name="tblkwwvVoKTcuLqvV">
+I, [2020-09-22T11:29:47.446893 #105]  INFO -- : #<Airtable::Table:0x00007fffcc82ea50 @api_key="key5BWaBb5FCx5sjD", @app_token="appu6bc56WwPum78l", @worksheet_name="tblkwwvVoKTcuLqvV">
