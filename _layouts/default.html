@@ -6,6 +6,48 @@ layout: default
 <!-- <body class="{%- if page.categories -%}{{ page.categories }}{%- endif -%}" id="{%- if page.status -%}{{ page.status }}{%- endif -%}"> -->
 <body>
 	<main id="content">
+		<nav class="navbar navbar-expand-lg sticky-top">
+			<a href="/" id="logo_container">
+				{% include logoSVG.html %}
+			</a>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav m-auto">
+					<img class="close-btn" src="./assets/images/close.svg" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+					<li class="nav-item active">
+						  <a class="nav-link" href="/about">About</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" id="volunteer_btn" data-toggle="collapse" data-target="#navbarSupportedContent">Volunteer</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" id="assistance_btn">Request Assistance</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" id="donate_btn">Donate</a>
+					</li>
+				</ul>
+			</div>
+			<div class="right-btn-container">
+				<div class="eng-span-container">
+					<div class="eng lang-btn active">
+						EN
+					</div>
+					<div class="span lang-btn">
+						ES
+					</div>
+				</div>
+				<button id="collapse_btn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+			</div>
+		</nav>
+
+		<div class="parallax-bg">
+			<div class="circle blue"></div>
+			<div class="circle orange"></div>
+		</div>
+
 		{{content}}
 	</div>
 	{% include scripts.html %}

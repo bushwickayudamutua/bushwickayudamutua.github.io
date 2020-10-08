@@ -11,10 +11,27 @@ $(document).ready(function(){
         orangeCircle.css('transform', `translateX(${x}px) translateY(${y}px) skew(70deg, 78deg)`);
     });
 
-    //Neighbors scroll animation
-    $(window).on('scroll', function(event) {
-        console.log(window.pageYOffset);
+    //Nav scroll
+    $("#volunteer_btn").on('click', function() {
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $("#volunteer").offset().top - 175
+        }, 500);
+    });
 
+    $("#assistance_btn").on('click', function() {
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $("#assistance").offset().top - 175
+        }, 500);
+    });
+
+    $("#donate_btn").on('click', function() {
+        $([document.documentElement, document.body]).animate({
+            scrollTop: document.body.scrollHeight
+        }, 500);
+    });
+
+    //Neighbors scroll animation
+    $(window).on('scroll', function() {
         $.each($('#neighbors_ticker .item'), (i, value) => {
             $(value).css('transform', `translateX(-${window.pageYOffset}px) translateY(0)`);
         })
@@ -48,16 +65,12 @@ $(document).ready(function(){
         loop: true,
         center: true,
         startPosition: 1,
-        dots: false,
+        stagePadding: 0,
+        dots: true,
         responsive:{
-            0:{
-                stagePadding: 0
-            },
-            600:{
-                stagePadding: 0
-            },
-            1500:{
-                stagePadding: 325
+            1024:{
+                stagePadding: 325,
+                dots: false
             }
         }
     });
@@ -77,5 +90,6 @@ $(document).ready(function(){
 
         $('.lang-text.eng').removeClass('active');
         $('.lang-text.span').addClass('active');
-    })
+    });
+
 });

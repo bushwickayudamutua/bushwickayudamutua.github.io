@@ -4,42 +4,7 @@ layout: default
 categories: home
 ---
 
-<!-- <h1>{{site.title}}</h1> -->
-	<nav class="navbar navbar-expand-lg sticky-top bg-transparent">
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			{% include logoSVG.html %}
-			<ul class="navbar-nav m-auto">
-				<li class="nav-item active">
-				  	<a class="nav-link" href="#">About</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Volunteer</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Request Assistance</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Donate</a>
-				</li>
-			</ul>
-
-			<div class="eng-span-container">
-				<div class="eng lang-btn active">
-					EN
-				</div>
-				<div class="span lang-btn">
-					ES
-				</div>
-			</div>
-		</div>
-	</nav>
-
-	<div class="parallax-bg">
-		<div class="circle blue"></div>
-		<div class="circle orange"></div>
-	</div>
-
-	<div class="d-lg-flex">
+	<div class="d-lg-flex header-container">
 		<div class="container d-lg-flex align-items-lg-center min-height-100" id="header_pane">
 			<div class="content-container">
 				<div class="title">Bushwick</br>Ayuda Mutua</div>
@@ -49,6 +14,7 @@ categories: home
 				</div>
 				<div class="learn-more link">
 					<span class="eng lang-text active">Learn More</span>
+					<img class="arrow-img" src="/assets/images/arrow.svg"/>
 					<span class="span lang-text">Spanish tbd</span>
 				</div>
 			</div>
@@ -72,25 +38,37 @@ categories: home
 			<div class="item">
 				<div class="item-bg"></div>
 				<div class="img-container">
-					<img src="https://picsum.photos/500/415">
+					<img src="./assets/carousel/carousel1.jpg">
 				</div>
 			</div>
 			<div class="item">
 				<div class="item-bg"></div>
 				<div class="img-container">
-					<img src="https://picsum.photos/500/415">
+					<img src="./assets/carousel/carousel2.jpg">
 				</div>
 			</div>
 			<div class="item">
 				<div class="item-bg"></div>
 				<div class="img-container">
-					<img src="https://picsum.photos/500/415">
+					<img src="./assets/carousel/carousel3.jpg">
 				</div>
 			</div>
 			<div class="item">
 				<div class="item-bg"></div>
 				<div class="img-container">
-					<img src="https://picsum.photos/500/415">
+					<img src="./assets/carousel/carousel4.jpg">
+				</div>
+			</div>
+			<div class="item">
+				<div class="item-bg"></div>
+				<div class="img-container">
+					<img src="./assets/carousel/carousel5.jpg">
+				</div>
+			</div>
+			<div class="item">
+				<div class="item-bg"></div>
+				<div class="img-container">
+					<img src="./assets/carousel/carousel6.jpg">
 				</div>
 			</div>
 		</div>
@@ -99,25 +77,31 @@ categories: home
 
 	<!-- Requests -->
 	<div class="requests" style="margin-bottom:150px;">
-		<div class="container request pt-5 pb-5">
+		<div class="container request pt-5 pb-5" id="volunteer">
 			<div class="logo">
 				<img src="/assets/images/globe.svg"/>
 			</div>
 			<div class="text-container">
-				<div class="title pb-3">Sign up to <span class="underline">volunteer</span></div>
+				<div class="title pb-5">Sign up to <span class="underline">volunteer</span></div>
 				<p class="text pb-3">We are always looking for more neighbors to support our mission. From on-site food handling to connecting with folks in need of assistance, PR, awareness building, fundraising, finance, and tech, tell us about you and how you can help.</p>
-				<div class="link">Get Involved</div>
+				<div class="link">
+					<span>Get Involved</span>
+					<img class="arrow-img" src="/assets/images/arrow.svg"/>
+				</div>
 			</div>
 		</div>
 
-		<div class="container request pt-5 pb-5">
+		<div class="container request pt-5 pb-5" id="assistance">
 			<div class="logo">
 				<img src="/assets/images/hands.svg"/>
 			</div>
 			<div class="text-container">
 				<div class="title pb-3">Get <span class="underline">assistance</span></div>
 				<p class="text pb-3">We offer food assistance and access to essential items like feminine products, soap, diapers, and baby food. We make referrals to organizations we trust can support you in legal support, housing assistance, medical assistance, and more.</p>
-				<div class="link">Request help</div>
+				<div class="link">
+					<span>Request help</span>
+					<img class="arrow-img" src="/assets/images/arrow.svg"/>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -130,10 +114,10 @@ categories: home
 			<div class="item container">
 				<div class="text-container">
 					<div class="text">
-						Bushwick Ayuda Mutua has been such an amazing, wonderful organization to work with during this crazy COVID-19 pandemic. I don’t know what I would do without them!
+						Living in a community where your comfort is secure and the comfort of others doesn’t matter is not a community. A community only becomes a community once folks are watching out for each other and are aware of each other's conditions and are able to take care of each other.
 					</div>
 					<div class="person">
-						Dwayne Johson
+						Maria, BAM Coordinator
 					</div>
 				</div>
 			</div>
@@ -141,10 +125,10 @@ categories: home
 			<div class="item container">
 				<div class="text-container">
 					<div class="text">
-						Bushwick Ayuda Mutua has been such an amazing, wonderful organization to work with during this crazy COVID-19 pandemic. I don’t know what I would do without them!
+						El futuro de Bushwick, lo veo como una comunidad resiliente que se cuide y se protege sola, que se une para proveerse a si misma y salir adelante.
 					</div>
 					<div class="person">
-						Dwayne Johson
+						Sebastian, BAM Coordinator
 					</div>
 				</div>
 			</div>
@@ -152,10 +136,21 @@ categories: home
 			<div class="item container">
 				<div class="text-container">
 					<div class="text">
-						Bushwick Ayuda Mutua has been such an amazing, wonderful organization to work with during this crazy COVID-19 pandemic. I don’t know what I would do without them!
+						Pues más que nada yo he visto pobreza. Más para las comunidades Hispanas, personas que no hablan inglés, no tienen suficiente información de tanta ayuda y programas que ofrece la ciudad y organizaciones. Pero sobre todo discriminacion hacia las personas humildes. Eso es lo que yo he visto. Pero he visto también cosas buenas, en donde no importa tu color, religión de donde seas, hay ayuda para todos. Eso es lo que yo he visto.
 					</div>
 					<div class="person">
-						Dwayne Johson
+						Bushwick Neighbor
+					</div>
+				</div>
+			</div>
+
+			<div class="item container">
+				<div class="text-container">
+					<div class="text">
+						People from Bushwick should get more involved with the work that we are doing with BAM because you know we are all neighbors, we are all in this together, but some parts of this community are really hurting and need help and I think it is important to really draw together and find communal strength.
+					</div>
+					<div class="person">
+						Mattie, BAM Coordinator
 					</div>
 				</div>
 			</div>
@@ -181,19 +176,23 @@ categories: home
 		</div>
 
 		<div class="footer-inner">
-			<div class="d-lg-flex justify-content-between">
-				<div class="d-lg-flex links-container">
-					<span>2020 BAM. All Rights Reserved</span>
-					<span>Privacy Policy</span>
-					<span>Tech & Data Policy</span>
+			<div class="d-lg-flex justify-content-lg-between">
+				<div class="d-flex flex-column flex-lg-row align-items-center links-container order-1 order-lg-2">
+					<div class="footer-link">Facebook</div>
+					<div class="footer-link">Twitter</div>
+					<div class="footer-link">Instagram</div>
 				</div>
 
-				<div class="d-lg-flex links-container">
-					<span>Twitter</span>
-					<span>Instagram</span>
-					<span>Facebook</span>
+				<div class="d-flex flex-column flex-lg-row align-items-center links-container order-2 order-lg-1">
+					<div class="footer-link no-underline">2020 BAM. All Rights Reserved</div>
+					<div class="footer-link">Privacy Policy</div>
+					<div class="footer-link">Tech & Data Policy</div>
 				</div>
 			</div>
+		</div>
+		
+		<div class="d-sm-none logo-container">
+			{% include logoSVG_whiteText.html %}
 		</div>
 	</div>
 <!-- 
