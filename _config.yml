@@ -8,10 +8,15 @@ url: ''
 twitter_username: 
 github_username: 
 
+plugins:
+  - airtable
+  - jekyll-admin
+
 sass:
   load_paths:
     - _sass
     - node_modules
+
 exclude:
   - node_modules
   - LICENSE

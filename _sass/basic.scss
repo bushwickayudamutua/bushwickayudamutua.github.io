@@ -1,8 +1,8 @@
 @mixin font-face($title, $file: $title, $weight: normal, $style: normal, $stretch: normal, $transform: normal, $path: "../assets/fonts/") {
   @font-face {
     font-family: #{$title};
-    src: url("#{$path}#{$file}.eot");
-    src: url("#{$path}#{$file}.eot?#iefix") format("embedded-opentype"), url("#{$path}#{$file}.woff") format("woff"), url("#{$path}#{$file}.ttf") format("truetype"), url("#{$path}#{$file}.svg##{$title}") format("svg");
+    src: url("#{$path}#{$file}.otf") format('opentype');
+    // src: url("#{$path}#{$file}.eot?#iefix") format("embedded-opentype"), url("#{$path}#{$file}.woff") format("woff"), url("#{$path}#{$file}.ttf") format("truetype"), url("#{$path}#{$file}.svg##{$title}") format("svg");
     font-weight: $weight;
     font-style: $style;
     font-stretch: $stretch;
@@ -16,10 +16,12 @@
   }
 }
 
-@include font-face(standard-book, standard-book, normal, normal);
-@include font-face(standard-book, standard-book-italic, normal, italic);
-@include font-face(standard-book, standard-bold, bold, normal);
-@include font-face(standard-book, standard-bolditalic, bold, italic);
+// @include font-face(standard-book, standard-book, normal, normal);
+// @include font-face(standard-book, standard-book-italic, normal, italic);
+// @include font-face(standard-book, standard-bold, bold, normal);
+// @include font-face(standard-book, standard-bolditalic, bold, italic);
+@include font-face(grifter-bold, 'GRIFTER™+Bold');
+@include font-face(monument-bold, MonumentExtended-Ultrabold);
 
 $color-1: #FF6E2E;
 $color-2: #AECEE6;
