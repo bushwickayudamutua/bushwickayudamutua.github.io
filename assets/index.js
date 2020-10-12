@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
     //BG Hover animation
     $(window).on('mousemove', function(event) {
         const blueCircle = $('.circle.blue');
@@ -13,9 +14,18 @@ $(document).ready(function(){
 
     //Nav scroll
     $("#volunteer_btn").on('click', function() {
-        $([document.documentElement, document.body]).animate({
-            scrollTop: $("#volunteer").offset().top - 175
-        }, 500);
+        if (window.location.href.includes('about')) {
+            pushStateAndDoSomething({state: {}, title: 'home', url: '/'}, () => {
+                $([document.documentElement, document.body]).animate({
+                    scrollTop: $("#volunteer").offset().top - 175
+                }, 500);
+            });
+            // window.location.href = '/';
+        } else {
+            $([document.documentElement, document.body]).animate({
+                scrollTop: $("#volunteer").offset().top - 175
+            }, 500);
+        }
     });
 
     $("#assistance_btn").on('click', function() {
@@ -30,11 +40,23 @@ $(document).ready(function(){
         }, 500);
     });
 
-    //Neighbors scroll animation
     $(window).on('scroll', function() {
+        //Neighbors scroll animation
         $.each($('#neighbors_ticker .item'), (i, value) => {
             $(value).css('transform', `translateX(-${window.pageYOffset}px) translateY(0)`);
         })
+
+        //Shrink logo on scroll
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            $('#logo_main').removeClass('active');
+            $('#logo_hands').addClass('active');
+            $('#logo_container').addClass('scrolled');
+
+        } else {
+            $('#logo_hands').removeClass('active');
+            $('#logo_main').addClass('active');
+            $('#logo_container').removeClass('scrolled');
+        }
     });
 
     //Picture carousel
@@ -91,5 +113,10 @@ $(document).ready(function(){
         $('.lang-text.eng').removeClass('active');
         $('.lang-text.span').addClass('active');
     });
+
+    function pushStateAndDoSomething({ state, title, url = null} , callback) {
+        history.pushState(state, title, url);
+        callback();
+    }
 
 });
