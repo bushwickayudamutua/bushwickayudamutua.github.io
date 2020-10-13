@@ -13,32 +13,32 @@ $(document).ready(function(){
     });
 
     //Nav scroll
-    $("#volunteer_btn").on('click', function() {
-        if (window.location.href.includes('about')) {
-            pushStateAndDoSomething({state: {}, title: 'home', url: '/'}, () => {
-                $([document.documentElement, document.body]).animate({
-                    scrollTop: $("#volunteer").offset().top - 175
-                }, 500);
-            });
-            // window.location.href = '/';
-        } else {
-            $([document.documentElement, document.body]).animate({
-                scrollTop: $("#volunteer").offset().top - 175
-            }, 500);
-        }
-    });
+    // $("#volunteer_btn").on('click', function() {
+    //     if (window.location.href.includes('about')) {
+    //         pushStateAndDoSomething({state: {}, title: 'home', url: '/'}, () => {
+    //             $([document.documentElement, document.body]).animate({
+    //                 scrollTop: $("#volunteer").offset().top - 175
+    //             }, 500);
+    //         });
+    //         // window.location.href = '/';
+    //     } else {
+    //         $([document.documentElement, document.body]).animate({
+    //             scrollTop: $("#volunteer").offset().top - 175
+    //         }, 500);
+    //     }
+    // });
 
-    $("#assistance_btn").on('click', function() {
-        $([document.documentElement, document.body]).animate({
-            scrollTop: $("#assistance").offset().top - 175
-        }, 500);
-    });
+    // $("#assistance_btn").on('click', function() {
+    //     $([document.documentElement, document.body]).animate({
+    //         scrollTop: $("#assistance").offset().top - 175
+    //     }, 500);
+    // });
 
-    $("#donate_btn").on('click', function() {
-        $([document.documentElement, document.body]).animate({
-            scrollTop: document.body.scrollHeight
-        }, 500);
-    });
+    // $("#donate_btn").on('click', function() {
+    //     $([document.documentElement, document.body]).animate({
+    //         scrollTop: document.body.scrollHeight
+    //     }, 500);
+    // });
 
     $(window).on('scroll', function() {
         //Neighbors scroll animation
@@ -113,10 +113,5 @@ $(document).ready(function(){
         $('.lang-text.eng').removeClass('active');
         $('.lang-text.span').addClass('active');
     });
-
-    function pushStateAndDoSomething({ state, title, url = null} , callback) {
-        history.pushState(state, title, url);
-        callback();
-    }
 
 });
