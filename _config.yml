@@ -25,3 +25,4 @@ exclude:
   - package.json
   - package-lock.json
   - yarn.lock
+theme: jekyll-theme-slate
