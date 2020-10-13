@@ -628,6 +628,16 @@ nav {
 
 	position: relative;
 
+	a {
+		color: white;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: none;
+			color: black;
+		}
+	}
+
 	.pointing-img {
 		position: absolute;
 		top: -37px;
@@ -670,10 +680,20 @@ nav {
 
 		transition: background .5s;
 
+		a {
+			color: white;
+			&:hover {
+				color: black;
+			}
+		}
+
 		&:hover {
 			cursor: pointer;
 			background: white;
-			color: black;
+
+			a {
+				color: black;
+			}
 		}
 	}
 
