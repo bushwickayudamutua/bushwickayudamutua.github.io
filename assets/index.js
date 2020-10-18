@@ -8,8 +8,10 @@ $(document).ready(function(){
         const x = (window.innerWidth - event.clientX)/2;
         const y = (window.innerHeight - event.clientY)/2;
 
-        blueCircle.css('transform', `translateX(${x}px) translateY(${y}px) skew(70deg, 78deg)`);
-        orangeCircle.css('transform', `translateX(${x}px) translateY(${y}px) skew(70deg, 78deg)`);
+        // blueCircle.css('transform', `translateX(${x}px) translateY(${y}px) skew(70deg, 78deg)`);
+        // orangeCircle.css('transform', `translateX(${x}px) translateY(${y}px) skew(70deg, 78deg)`);
+        blueCircle.css('transform', `translateX(${x*.2}px) translateY(${y*.2}px) skew(25deg, -25deg)`);
+        orangeCircle.css('transform', `translateX(${x*.2}px) translateY(${y*.2}px) skew(25deg, -25deg)`);
     });
 
     //Nav scroll
@@ -87,10 +89,9 @@ $(document).ready(function(){
         loop: true,
         center: true,
         startPosition: 1,
-        stagePadding: 0,
         dots: true,
         responsive:{
-            1024:{
+            1600:{
                 stagePadding: 325,
                 dots: false
             }

@@ -42,6 +42,15 @@ $bam-orange: #FF6E2E;
 	&:hover {
 		cursor: pointer;
 	}
+
+	a {
+		color: black;
+
+		&:hover {
+			text-decoration: underline;
+			color: black !important;
+		}
+	}
 }
 
 .lang-text {
@@ -106,8 +115,8 @@ $bam-orange: #FF6E2E;
 	background-size: cover;
 
 	.circle {
-		width: 472px;
-    	height: 468px;
+		width: 600px;
+    	height: 600px;
 		-moz-border-radius: 50%;
 		border-radius: 50%;
 		opacity: 0.3;
@@ -118,20 +127,20 @@ $bam-orange: #FF6E2E;
 		filter: blur(45px);
 		-webkit-filter: blur(45px);
 		  
-		transform: skew(70deg, 78deg);
+		transform: skew(25deg, -25deg);
 		// background: rgb(174,206,230);
 		// background: linear-gradient(90deg, rgba(174,206,230,1) 0%, rgba(255,110,46,1) 100%);
 
 		&.orange {
 			// top: -20%;
-			left:60%;
+			left:50%;
 			background-color: $bam-orange;
 		}
 
 		&.blue {
-			// left: 38%;
+			left: 20%;
 			// top: -20%;
-			background-color: #AECEE6;
+			background-color: #6aa5d2;
 		}
 	}
 }
@@ -448,7 +457,7 @@ nav {
 	.img-container {
 		position: absolute;
 		width: 96%;
-		// height: 96%;
+		max-height: 329px;
 		background: blue;
 		border: 5px solid black;
 		overflow: hidden;
@@ -456,13 +465,17 @@ nav {
 
 	.item-bg {
 		width: 95%;
-		height: 74%;
+		max-height: 329px;
 		position: absolute;
 		background: #AECEE6;
 		z-index: -1;
 		left: 19px;
 		top: 24px;
 		border: 5px solid black;
+
+		img {
+			visibility: hidden;
+		}
 	}
 }
 
@@ -475,15 +488,25 @@ nav {
 #testimony_carousel {
 	.item {
 		display: block;
-		width: 765px;
+		max-width: 765px;
 
-		font-size: 34px;
-		line-height: 46px;
+		font-size: 24px;
+		line-height: 36px;
+
+		@media only screen and (min-width: 577px) {
+			font-size: 34px;
+			line-height: 46px;
+		}
 
 		.person {
 			margin-top: 30px;
 			color: $bam-orange;
-			font-size: 30px;
+			font-size: 20px;
+
+			@media only screen and (min-width: 577px) {
+				font-size: 30px;
+			}
+
 			font-family: "grifter-bold";
 		}
 	}
