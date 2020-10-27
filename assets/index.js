@@ -12,47 +12,39 @@ $(document).ready(function(){
         localStorage.setItem('lang', 'eng');
     }
 
+    var imgPromises = [];
+    $('#pics_carousel .img-container img').each(function() {
+        const elem = $(this);
+        const img = new Image();
+        const src = elem.data('src');
+        const p = new Promise((resolve, reject) => {
+            img.onload = function() {
+                elem.attr('src', this.src);
+                resolve();
+            };
+        });
+        imgPromises.push(p);
+
+        img.src = src;
+    });
+    Promise.all(imgPromises).then(() => {
+        $('#pics_spinner').css('display', 'none');
+        $('#pics_carousel').css('display', 'block');
+    });
+
     //BG Hover animation
     $(window).on('mousemove', function(event) {
         const blueCircle = $('.circle.blue');
         const orangeCircle = $('.circle.orange');
         
-        const x = (window.innerWidth - event.clientX)/2;
-        const y = (window.innerHeight - event.clientY)/2;
+        const x = (window.innerWidth - event.clientX)/10;
+        const y = (window.innerHeight - event.clientY)/10;
 
         blueCircle.css('transform', `translateX(${x}px) translateY(${y}px) skew(70deg, 78deg)`);
         orangeCircle.css('transform', `translateX(${x}px) translateY(${y}px) skew(70deg, 78deg)`);
         // blueCircle.css('transform', `translateX(${x*.2}px) translateY(${y*.2}px) skew(25deg, -25deg)`);
         // orangeCircle.css('transform', `translateX(${x*.2}px) translateY(${y*.2}px) skew(25deg, -25deg)`);
     });
-
-    //Nav scroll
-    // $("#volunteer_btn").on('click', function() {
-    //     if (window.location.href.includes('about')) {
-    //         pushStateAndDoSomething({state: {}, title: 'home', url: '/'}, () => {
-    //             $([document.documentElement, document.body]).animate({
-    //                 scrollTop: $("#volunteer").offset().top - 175
-    //             }, 500);
-    //         });
-    //         // window.location.href = '/';
-    //     } else {
-    //         $([document.documentElement, document.body]).animate({
-    //             scrollTop: $("#volunteer").offset().top - 175
-    //         }, 500);
-    //     }
-    // });
-
-    // $("#assistance_btn").on('click', function() {
-    //     $([document.documentElement, document.body]).animate({
-    //         scrollTop: $("#assistance").offset().top - 175
-    //     }, 500);
-    // });
-
-    // $("#donate_btn").on('click', function() {
-    //     $([document.documentElement, document.body]).animate({
-    //         scrollTop: document.body.scrollHeight
-    //     }, 500);
-    // });
 
     $(window).on('scroll', function() {
         //Neighbors scroll animation
