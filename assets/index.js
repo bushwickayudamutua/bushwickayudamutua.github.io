@@ -1,5 +1,17 @@
 $(document).ready(function(){
 
+    if (localStorage.getItem('lang') !== null) {
+        if (localStorage.getItem('lang') === 'span') {
+            $('.lang-btn.eng').removeClass('active');
+            $('.span.lang-btn').addClass('active');
+
+            $('.lang-text.eng').removeClass('active');
+            $('.lang-text.span').addClass('active');
+        }
+    } else {
+        localStorage.setItem('lang', 'eng');
+    }
+
     //BG Hover animation
     $(window).on('mousemove', function(event) {
         const blueCircle = $('.circle.blue');
@@ -8,10 +20,10 @@ $(document).ready(function(){
         const x = (window.innerWidth - event.clientX)/2;
         const y = (window.innerHeight - event.clientY)/2;
 
-        // blueCircle.css('transform', `translateX(${x}px) translateY(${y}px) skew(70deg, 78deg)`);
-        // orangeCircle.css('transform', `translateX(${x}px) translateY(${y}px) skew(70deg, 78deg)`);
-        blueCircle.css('transform', `translateX(${x*.2}px) translateY(${y*.2}px) skew(25deg, -25deg)`);
-        orangeCircle.css('transform', `translateX(${x*.2}px) translateY(${y*.2}px) skew(25deg, -25deg)`);
+        blueCircle.css('transform', `translateX(${x}px) translateY(${y}px) skew(70deg, 78deg)`);
+        orangeCircle.css('transform', `translateX(${x}px) translateY(${y}px) skew(70deg, 78deg)`);
+        // blueCircle.css('transform', `translateX(${x*.2}px) translateY(${y*.2}px) skew(25deg, -25deg)`);
+        // orangeCircle.css('transform', `translateX(${x*.2}px) translateY(${y*.2}px) skew(25deg, -25deg)`);
     });
 
     //Nav scroll
@@ -92,14 +104,22 @@ $(document).ready(function(){
         dots: true,
         responsive:{
             1600:{
-                stagePadding: 325,
-                dots: false
+                stagePadding: 325
             }
         }
     });
 
+
+    //About collapse show/hide minus/plus buttons
+    $('.about-content').on('show.bs.collapse', function () {
+        $('.about-content').each(function(){
+            $(this).collapse('hide');
+        });
+    });
+
     //English/Spanish toggle
     $('.eng.lang-btn').on('click', () => {
+        localStorage.setItem('lang', 'eng');
         $('.span.lang-btn').removeClass('active');
         $('.lang-btn.eng').addClass('active');
         
@@ -108,6 +128,7 @@ $(document).ready(function(){
     });
 
     $('.span.lang-btn').on('click', () => {
+        localStorage.setItem('lang', 'span');
         $('.lang-btn.eng').removeClass('active');
         $('.span.lang-btn').addClass('active');
 
