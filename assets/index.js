@@ -33,18 +33,18 @@ $(document).ready(function(){
     });
 
     //BG Hover animation
-    $(window).on('mousemove', function(event) {
-        const blueCircle = $('.circle.blue');
-        const orangeCircle = $('.circle.orange');
+    // $(window).on('mousemove', function(event) {
+    //     const blueCircle = $('.circle.blue');
+    //     const orangeCircle = $('.circle.orange');
         
-        const x = (window.innerWidth - event.clientX)/10;
-        const y = (window.innerHeight - event.clientY)/10;
+    //     const x = (window.innerWidth - event.clientX)/10;
+    //     const y = (window.innerHeight - event.clientY)/10;
 
-        blueCircle.css('transform', `translateX(${x}px) translateY(${y}px) skew(70deg, 78deg)`);
-        orangeCircle.css('transform', `translateX(${x}px) translateY(${y}px) skew(70deg, 78deg)`);
-        // blueCircle.css('transform', `translateX(${x*.2}px) translateY(${y*.2}px) skew(25deg, -25deg)`);
-        // orangeCircle.css('transform', `translateX(${x*.2}px) translateY(${y*.2}px) skew(25deg, -25deg)`);
-    });
+    //     blueCircle.css('transform', `translateX(${x}px) translateY(${y}px) skew(70deg, 78deg)`);
+    //     orangeCircle.css('transform', `translateX(${x}px) translateY(${y}px) skew(70deg, 78deg)`);
+    //     // blueCircle.css('transform', `translateX(${x*.2}px) translateY(${y*.2}px) skew(25deg, -25deg)`);
+    //     // orangeCircle.css('transform', `translateX(${x*.2}px) translateY(${y*.2}px) skew(25deg, -25deg)`);
+    // });
 
     $(window).on('scroll', function() {
         //Neighbors scroll animation
