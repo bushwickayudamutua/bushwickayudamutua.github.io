@@ -53,16 +53,16 @@ $(document).ready(function(){
         })
 
         //Shrink logo on scroll
-        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-            $('#logo_main').removeClass('active');
-            $('#logo_hands').addClass('active');
-            $('#logo_container').addClass('scrolled');
+        // if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        //     $('#logo_main').removeClass('active');
+        //     $('#logo_hands').addClass('active');
+        //     $('#logo_container').addClass('scrolled');
 
-        } else {
-            $('#logo_hands').removeClass('active');
-            $('#logo_main').addClass('active');
-            $('#logo_container').removeClass('scrolled');
-        }
+        // } else {
+        //     $('#logo_hands').removeClass('active');
+        //     $('#logo_main').addClass('active');
+        //     $('#logo_container').removeClass('scrolled');
+        // }
     });
 
     //Picture carousel
@@ -71,15 +71,19 @@ $(document).ready(function(){
         lazyLoad:true,
         margin:10,
         responsiveClass:true,
-        nav: false,
+        nav: true,
+        autoHeight: true,
+        navText: ["<img src='./assets/images/left.svg'>","<img src='./assets/images/right.svg'>"],
         responsive:{
             0:{
                 items:1,
             },
             600:{
+                autoHeight: false,
                 items:3,
             },
             1000:{
+                autoHeight: false,
                 items:3,
                 loop:false
             }
@@ -89,17 +93,28 @@ $(document).ready(function(){
     //Testimony Carousel
     $('#testimony_carousel').owlCarousel({
         items: 1,
-        nav: false,
+        nav: true,
+        navText: ["<img src='./assets/images/left.svg'>","<img src='./assets/images/right.svg'>"],
         loop: true,
         center: true,
         startPosition: 1,
         dots: true,
+        autoHeight: false,
         responsive:{
             1600:{
                 stagePadding: 325
             }
         }
     });
+
+    // $('#testimony_carousel').slick({
+    //     centerMode: true,
+    //     centerPadding: '3px',
+    //     slidesToShow: 3,
+    //     adaptiveHeight: true,
+    //     prevArrow: "<img src='./assets/images/left.svg'>",
+    //     nextArrow: "<img src='./assets/images/right.svg'>"
+    // });
 
 
     //About collapse show/hide minus/plus buttons

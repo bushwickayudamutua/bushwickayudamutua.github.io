@@ -121,11 +121,17 @@ $bam-orange: #FF6E2E;
 	background-size: cover;
 
 	.circle {
-		width: 600px;
-    	height: 600px;
+		width: 200px;
+		height: 200px;
+
+		@media only screen and (min-width: 1024px) {
+			width: 600px;
+    		height: 600px;
+		}
+		
 		-moz-border-radius: 50%;
 		border-radius: 50%;
-		opacity: 0.3;
+		opacity: 0.4;
 		position: absolute;
 		// top: 10%;
 		// left: 62%;
@@ -140,14 +146,17 @@ $bam-orange: #FF6E2E;
 		// background: linear-gradient(90deg, rgba(174,206,230,1) 0%, rgba(255,110,46,1) 100%);
 
 		&.orange {
-			// top: -20%;
-			left:60%;
+			left: 40%;
+			@media only screen and (min-width: 1024px) {	
+				left:60%;
+			}
 			background-color: $bam-orange;
 		}
 
 		&.blue {
-			left: 40%;
-			// top: -20%;
+			@media only screen and (min-width: 1024px) {	
+				left: 16%;
+			}
 			background-color: #6aa5d2;
 		}
 	}
@@ -232,6 +241,11 @@ nav {
 	.nav-logo {
 		position: absolute;
 		left: 30px;
+
+		@media only screen and (max-width: 576px) {
+			top: 16px;
+		}
+
 		width: 75px;
 		opacity: 0;
 
@@ -363,6 +377,10 @@ nav {
 				background-color: black;
 				opacity: 1;
 			}
+
+			span {
+				margin-top: 1px;
+			}
 		}
 	}
 
@@ -379,17 +397,40 @@ nav {
 .header-container {
 	@media only screen and (max-width: 1024px) {
 		margin-top: 65px;
+		margin-bottom: 65px;
 	}
 }
 #header_pane {
-	background-image: url("/assets/images/bam-tag.svg");
-	background-repeat: no-repeat;
-	background-position: 923px 494px;
+	@media only screen and (min-width: 375px) {
+		background-image: url("/assets/images/bam-tag.svg");
+		background-repeat: no-repeat;
+		background-size: 107px 100px;
+		background-position: 281px 531px;
+	}
+
+	@media only screen and (min-width: 768px) {
+		background-position: 488px 100px;
+	}
+
+	@media only screen and (min-width: 1024px) {
+		min-height: 100vh;
+		background-size: 175px 175px;
+		background-position: 728px 657px;
+	}
+
+	@media only screen and (min-width: 1200px) {
+		background-position: 923px 438px;
+	}
 
 	.title {
 		font-family: "grifter-bold";
 		font-size: 68px;
 		line-height: 82px;
+
+		@media only screen and (min-width: 1024px) {
+			font-size: 140px;
+			line-height: 140px;
+		}
 
 		@media only screen and (min-width: 1024px) {
 			font-size: 140px;
@@ -482,6 +523,20 @@ nav {
 #pics_carousel {
 	display: none;
 
+	// .owl-prev {
+	// 	position: absolute;
+	// 	top: 40%;
+	// 	margin-left: -25px;
+	// 	display: block !important;
+	// }
+	
+	// .owl-next {
+	// 	position: absolute;
+	// 	top: 40%;
+	// 	right: -25px;
+	// 	display: block !important;
+	// }
+
 	.owl-dots {
 		margin-top: 36px !important;
 	}
@@ -527,19 +582,29 @@ nav {
  * Testimony Carousel
 ******/
 .t-carousel-container {
-    margin-top: 150px;
+	margin-top: 50px;
+	
+	@media only screen and (min-width: 577px) {
+		margin-top: 150px;
+	}
 }
 #testimony_carousel {
+	// .owl-item {height: 0;}    
+	// .owl-item.active {height: auto;}
 	.item {
-		display: block;
+		// display: block;
 		max-width: 765px;
 
-		font-size: 24px;
-		line-height: 36px;
+		p {
+			font-size: 24px;
+			line-height: 36px;
+		}
 
 		@media only screen and (min-width: 577px) {
-			font-size: 28px;
-			line-height: 46px;
+			p {
+				font-size: 28px;
+				line-height: 46px;
+			}
 		}
 
 		.person {
@@ -558,6 +623,21 @@ nav {
 	.owl-item:not(.active) {
 		opacity: .2;
 	}
+
+	// .owl-prev {
+	// 	position: absolute;
+	// 	top: 40%;
+	// 	margin-left: -20px;
+	// 	transform: translateX(-50%);
+	// 	display: block !important;
+	// }
+	
+	// .owl-next {
+	// 	position: absolute;
+	// 	top: 40%;
+	// 	right: -25px;
+	// 	display: block !important;
+	// }
 }
 
 
@@ -594,8 +674,20 @@ nav {
 
 	#hands_mobile {
 		position: absolute;
-		top: 586px;
+		top: 427px;
 		left: 176px;
+
+		@media only screen and (min-width: 430px) {
+			top: 377px;
+		}
+
+		@media only screen and (min-width: 557px) {
+			top: 302px;
+		}
+
+		// @media only screen and (min-width: 550px) {
+		// 	display: none;
+		// }
 		
 		@media only screen and (min-width: 576px) {
 			display: none;
@@ -628,11 +720,18 @@ nav {
 	&#volunteer {
 		.logo {
 			right: -35px;
-			top: 42px;
+			top: 20px;
+
+			@media only screen and (min-width: 557px) {
+				// top: 147px;
+				top: 190px;
+			}
 
 			@media only screen and (min-width: 1024px) {
-				right: 1020px;
-    			top: -41px;
+				// right: 1020px;
+				top: -41px;
+				right: 0px;
+				left: 11px;
 			}
 		}
 	}
@@ -645,10 +744,14 @@ nav {
 		}
 		.logo {
 			left: 163px;
-			top: -66px;
+			top: -123px;
+			
+			@media only screen and (min-width: 557px) {
+				top: 272px;
+			}
 			
 			@media only screen and (min-width: 1024px) {
-				left: 59px;
+				left: 37px;
     			top: 74px;
 			}
 		}
@@ -770,6 +873,7 @@ nav {
 
 		font-family: "grifter-bold";
 		font-size: 20px;
+		line-height: 30px;
 		text-transform: uppercase;
 
 		border: 2px solid white;
@@ -781,7 +885,7 @@ nav {
 			cursor: pointer;
 			background: white;
 
-			a {
+			span {
 				color: $bam-orange;
 			}
 		}
@@ -793,6 +897,8 @@ nav {
 		border-top: 1px solid white;
 
 		.links-container {
+			text-align: center; 
+
 			.link:not(:last-child) {
 				margin-right: 50px;
 			}
@@ -854,11 +960,6 @@ nav {
   
 	.logo-container {
 		text-align: center;
-
-		svg {
-			width: 375px;
-			height: 140px;
-		}
 	}
 }
 
