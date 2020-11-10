@@ -519,7 +519,8 @@ nav {
 #network_pane {
 	background-image: url("/assets/images/volunteer.svg");
 	background-repeat: no-repeat;
-	background-position: 97% 100%;
+	background-position: 97% 98%;
+	height: 400px;
 	@media only screen and (max-width: 375px) {
 		background-size: 145px;
 	}
