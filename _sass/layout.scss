@@ -9,6 +9,19 @@ $delay: 400ms;
 $bam-orange: #FF6E2E;
 
 
+.owl-next,
+.owl-prev {
+	&:active,
+	&:focus {
+		outline: none !important;
+	}
+
+	&:hover {
+		background: none !important;
+	}
+}
+
+
 //Carousel indicator dots
 .owl-theme .owl-dots .owl-dot span {
 	width: 18px !important;
@@ -343,6 +356,11 @@ nav {
 	.right-btn-container {
 		display: flex;
 		align-items: center;
+
+		@media only screen and (min-width: 577px) and (max-width: 991px) {
+			width: 180px;
+			justify-content: space-between;
+		}
 	}
 	
 	.eng-span-container {
@@ -358,7 +376,7 @@ nav {
 		.lang-btn {
 			width: 50px;
 			height: 50px;
-			
+
 			padding: 10px;
 			text-transform: uppercase;
 			border: 3px solid black;
@@ -526,34 +544,23 @@ nav {
 #pics_carousel {
 	display: none;
 
-	// .owl-prev {
-	// 	position: absolute;
-	// 	top: 40%;
-	// 	margin-left: -25px;
-	// 	display: block !important;
-	// }
-	
-	// .owl-next {
-	// 	position: absolute;
-	// 	top: 40%;
-	// 	right: -25px;
-	// 	display: block !important;
-	// }
-
 	.owl-dots {
 		margin-top: 36px !important;
 	}
 
 	.item {
-		height: 440px;
+		min-height: 1px;
+	}
+
+	.item-inner {
+		height: 353px;
 	}
 
 	.spinner-border {
 		position: absolute;
 	}
 
-	.img-container {
-		position: absolute;
+	.img-outer-container {
 		width: 96%;
 		max-height: 329px;
 		background: #dee2e6;
@@ -676,21 +683,7 @@ nav {
 	position: relative;
 
 	#hands_mobile {
-		position: absolute;
-		top: 427px;
-		left: 176px;
-
-		@media only screen and (min-width: 430px) {
-			top: 377px;
-		}
-
-		@media only screen and (min-width: 557px) {
-			top: 302px;
-		}
-
-		// @media only screen and (min-width: 550px) {
-		// 	display: none;
-		// }
+		margin-left:100px;
 		
 		@media only screen and (min-width: 576px) {
 			display: none;
@@ -724,10 +717,11 @@ nav {
 		.logo {
 			right: -35px;
 			top: 20px;
+			z-index: -1;
 
 			@media only screen and (min-width: 557px) {
-				// top: 147px;
-				top: 190px;
+				// top: 190px;
+				top: 314px;
 			}
 
 			@media only screen and (min-width: 1024px) {
@@ -740,13 +734,14 @@ nav {
 	}
 
 	&#assistance {
-		margin-top: 4em;
+		// margin-top: 4em;
 
 		@media only screen and (min-width: 1024px) {
 			margin-top: 0;
 		}
 		.logo {
-			left: 163px;
+			// left: 163px;
+			left: 412px;
 			top: -123px;
 			
 			@media only screen and (min-width: 557px) {

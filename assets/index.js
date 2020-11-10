@@ -13,7 +13,7 @@ $(document).ready(function(){
     }
 
     var imgPromises = [];
-    $('#pics_carousel .img-container img').each(function() {
+    $('#pics_carousel .img-outer-container img').each(function() {
         const elem = $(this);
         const img = new Image();
         const src = elem.data('src');
