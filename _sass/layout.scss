@@ -21,6 +21,25 @@ $bam-orange: #FF6E2E;
 	}
 }
 
+.owl-nav {
+	width: 255px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.owl-prev {
+	position: absolute;
+	top: -13px;
+	display: block !important;
+}
+
+.owl-next {
+	position: absolute;
+	top: -13px;
+	right: 0px;
+	display: block !important;
+}
+
 
 //Carousel indicator dots
 .owl-theme .owl-dots .owl-dot span {
@@ -50,19 +69,29 @@ $bam-orange: #FF6E2E;
 	font-family: "grifter-bold";
 	font-size: 20px;
 
-	display: flex;
-
-	span {
-		margin-right: 10px;
-	}
-
 	a {
 		color: black;
+		display: flex;
+		
+		span {
+			margin-right: 10px;
+		}
+
+		.arrow {
+			position: relative;
+			top: 5px;
+		}
 
 		&:hover {
 			cursor: pointer;
-			text-decoration: underline;
+			text-decoration: none;
 			color: $bam-orange;
+
+			.arrow {
+				#Arrow {
+					stroke: $bam-orange;
+				}
+			}
 		}
 	}
 
@@ -70,6 +99,8 @@ $bam-orange: #FF6E2E;
 		width: 18px;
 		height: 28px;
 	}
+
+	
 }
 
 .lang-text {
@@ -191,52 +222,6 @@ body {
 	font-style: italic;
 }
 
-// .sig {
-
-// 	text-align: center;
-// 	svg {
-// 		width: ($gap * 2);
-// 		height: ($gap * 2);
-// 		@media (max-width: $breakpoint) {
-// 			width: ($gap * 1.5);
-// 			height: ($gap * 1.5);
-// 		}
-// 	}
-// }
-
-
-// sidebar {
-// 	@include fadeInDown;
-// 	@media (min-width: $breakpoint) {
-// 		height: 100vh;
-// 		position: sticky;
-// 		top: -1;
-// 		padding: $gap 0;
-// 		display: grid;
-// 		grid-template-rows: $logo 1fr;
-// 		grid-gap: $gap;
-// 		nav {
-// 			align-self: end;
-// 		}
-// 	}
-// 	nav {
-// 		ul {
-// 			padding-left: 0;
-// 			   list-style: none;
-			 
-// 			@media (max-width: $breakpoint) {
-// 				text-align: center;
-// 				li {
-// 					display: inline-block;
-// 					margin-top: ($gap / 2);
-// 					margin-left: 5px;
-// 				}
-// 			}
-// 		}
-// 	}
-
-// }
-
 /*****
  * Nav
 ******/
@@ -249,7 +234,13 @@ nav {
 	@media only screen and (min-width: 1024px) {
 		padding-right: 50px !important;
 	}
+
+	height: 114px;
+	transition: .5s height;
 	
+	&.scrolled {
+		height: 64px;
+	}
 
 	.nav-logo {
 		position: absolute;
@@ -270,7 +261,7 @@ nav {
 			opacity: 1;
 		}
 
-		transition: opacity .5s;
+		// transition: opacity .5s;
 
 		@media only screen and (min-width: 577px) {
 			width: 95px;
@@ -284,7 +275,7 @@ nav {
 			height: 52px;
 		}
 		
-		transition: height .5s;
+		// transition: height .5s;
 
 		@media only screen and (max-width: 576px) {
 			margin-left: -17px;
@@ -549,6 +540,23 @@ nav {
 		margin-top: 36px !important;
 	}
 
+	.owl-nav {
+		width: 312px;
+	}
+
+	.owl-prev {
+		position: absolute;
+		top: 9px;
+		display: block !important;
+	}
+	
+	.owl-next {
+		position: absolute;
+		top: 9px;
+		right: 0px;
+		display: block !important;
+	}
+	
 	.item {
 		min-height: 1px;
 	}
@@ -594,16 +602,9 @@ nav {
 ******/
 .t-carousel-container {
 	margin-top: 50px;
-	
-	@media only screen and (min-width: 577px) {
-		margin-top: 150px;
-	}
 }
 #testimony_carousel {
-	// .owl-item {height: 0;}    
-	// .owl-item.active {height: auto;}
 	.item {
-		// display: block;
 		max-width: 765px;
 
 		p {
@@ -634,21 +635,6 @@ nav {
 	.owl-item:not(.active) {
 		opacity: .2;
 	}
-
-	// .owl-prev {
-	// 	position: absolute;
-	// 	top: 40%;
-	// 	margin-left: -20px;
-	// 	transform: translateX(-50%);
-	// 	display: block !important;
-	// }
-	
-	// .owl-next {
-	// 	position: absolute;
-	// 	top: 40%;
-	// 	right: -25px;
-	// 	display: block !important;
-	// }
 }
 
 
@@ -1003,6 +989,7 @@ nav {
 
 			@media only screen and (min-width: 1024px) {
 				font-size: 100px;
+				line-height: 100px;
 			}
 		}
 
