@@ -53,18 +53,18 @@ $(document).ready(function(){
         })
 
         //Shrink logo on scroll
-        if (document.body.scrollTop > 0) {
-            $('#logo_main').removeClass('active');
-            $('#logo_hands').addClass('active');
-            $('#logo_container').addClass('scrolled');
-            $('nav').addClass('scrolled');
+        // if (document.body.scrollTop > 0) {
+        //     $('#logo_main').removeClass('active');
+        //     $('#logo_hands').addClass('active');
+        //     $('#logo_container').addClass('scrolled');
+        //     $('nav').addClass('scrolled');
 
-        } else {
-            $('#logo_hands').removeClass('active');
-            $('#logo_main').addClass('active');
-            $('#logo_container').removeClass('scrolled');
-            $('nav').removeClass('scrolled');
-        }
+        // } else {
+        //     $('#logo_hands').removeClass('active');
+        //     $('#logo_main').addClass('active');
+        //     $('#logo_container').removeClass('scrolled');
+        //     $('nav').removeClass('scrolled');
+        // }
     });
 
     //Picture carousel
