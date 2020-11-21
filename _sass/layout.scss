@@ -417,7 +417,11 @@ nav {
 		background-image: url("/assets/images/bam-tag.svg");
 		background-repeat: no-repeat;
 		background-size: 107px 100px;
-		background-position: 281px 531px;
+		background-position: 281px 119px;
+	}
+
+	@media only screen and (min-width: 513px) {
+		background-position: 354px 378px;
 	}
 
 	@media only screen and (min-width: 768px) {
@@ -512,8 +516,9 @@ nav {
 	background-repeat: no-repeat;
 	background-position: 97% 98%;
 	height: 400px;
-	@media only screen and (max-width: 375px) {
+	@media only screen and (max-width: 560px) {
 		background-size: 145px;
+		background-position: 97% 0%;
 	}
 
 }
