@@ -10,7 +10,7 @@ github_username:
 
 plugins:
   - airtable
-  - jekyll-admin
+  # - jekyll-admin
 
 sass:
   load_paths:
