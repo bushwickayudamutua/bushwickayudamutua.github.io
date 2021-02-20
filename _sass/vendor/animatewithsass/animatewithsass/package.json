@@ -2,7 +2,7 @@
   "_args": [
     [
       "animatewithsass@3.2.1",
-      "/Users/zachsamuelson/Documents/BAM/bushwickayudamutua.github.io"
+      "/mnt/c/Users/Zach/Documents/BAM/NEW/bushwickayudamutua.github.io"
     ]
   ],
   "_from": "animatewithsass@3.2.1",
@@ -26,7 +26,7 @@
   ],
   "_resolved": "https://registry.npmjs.org/animatewithsass/-/animatewithsass-3.2.1.tgz",
   "_spec": "3.2.1",
-  "_where": "/Users/zachsamuelson/Documents/BAM/bushwickayudamutua.github.io",
+  "_where": "/mnt/c/Users/Zach/Documents/BAM/NEW/bushwickayudamutua.github.io",
   "author": {
     "name": "geoffgraham",
     "email": "@geoffreygraham"

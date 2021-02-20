@@ -135,4 +135,12 @@ $(document).ready(function(){
         $('.lang-text.span').addClass('active');
     });
 
+    //Nav dropdown
+    $('.nav-dropdown').on('mouseover', () => {
+        $('.nav-dropdown__menu').addClass('active');
+    });
+    $('.nav-dropdown').on('mouseleave', () => {
+        $('.nav-dropdown__menu').removeClass('active');
+    });
+
 });
