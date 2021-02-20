@@ -1,11 +1,10 @@
-title: 'Bushwick Ayuda Mutua'
+title: Bushwick Ayuda Mutua
 email: info@nicholasfrota.com
 description: >- # this means to ignore newlines until "baseurl:"
   Lorem Ipsum
-baseurl: 'bushwichayudamutua.com'
+baseurl: ''
 basecolor: '#000000' # for browser settings
-url: 'bushwichayudamutua.com'
-img: 'BAM.svg'
+url: ''
 twitter_username: 
 github_username: 
 
