@@ -1,14 +1,15 @@
 {
-  "name": "mysite",
+  "name": "bushwickayudamutua.github.io",
   "version": "1.0.0",
-  "description": "",
+  "readme": "README.md",
+  "description": "A network of Bushwick neighbors supporting neighbors",
   "main": "index.js",
+  "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "BAM",
   "dependencies": {
     "animatewithsass": "^3.2.1",
     "bootstrap": "^4.5.2",
