@@ -23,4 +23,4 @@ When it's running, go to [https://localhost:4000](https://localhost:4000) on you
 
 ### Want to Volunteer?
 
-If you'd like to get involved with BAM, [please fill out our volunteer form and we'll be in touch](https://bit.ly/BAM-sign-up)!
+If you'd like to get involved with BAM, [please fill out our volunteer form and we'll be in touch](https://app.miniextensions.com/form/0oO8aCDBmvgHkxlnfPTD)!
