@@ -1230,16 +1230,19 @@ nav {
 ******/
 
 .mini-extensions-form {
+	background:url(/assets/images/loading.gif) center top no-repeat;
     position: relative;
     overflow: hidden;
     padding-top: 56.25%;
     height: 1000px;
+	z-index: 1;
 	iframe {
+		z-index: 0;
 		position: absolute;
 		top: 0;
 		left: 0;
 		width: 100%;
 		height: 100%;
-		border: 0;
+		border: none;
 	}
 }
