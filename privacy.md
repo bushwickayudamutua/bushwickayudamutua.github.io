@@ -2,6 +2,7 @@
 title: Bushwick Ayuda Mutua | Safety Guidelines
 layout: policy
 categories: policies
+permalink: /privacy/
 ---
 
 <div class="eng lang-text active" markdown="1">

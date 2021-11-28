@@ -1073,6 +1073,7 @@ nav {
 	
 	.content-container {
 		position: relative;
+		height: 100%;
 
 		#community_image {
 			top: -9%;
@@ -1221,5 +1222,24 @@ nav {
 	margin: 25px;
 	h1 {
 		text-align: center;
+	}
+}
+
+/*****
+ * mini extension forms
+******/
+
+.mini-extensions-form {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+    height: 1000px;
+	iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border: 0;
 	}
 }
