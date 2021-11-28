@@ -143,10 +143,4 @@ $(document).ready(function(){
         $('.nav-dropdown__menu').removeClass('active');
     });
 
-    // Mini Extensions iFrame
-    $('iframe.mini-extensions-iframe').on('load', function() {
-        
-        // do stuff 
-    });
-
 });
