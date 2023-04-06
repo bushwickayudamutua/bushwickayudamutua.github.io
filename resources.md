@@ -2,7 +2,7 @@
 title: Bushwick Ayuda Mutua | Resources
 layout: default
 categories: policies
-permalink: /resources
+permalink: /resources.html
 ---
 
 
