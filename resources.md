@@ -1,6 +1,6 @@
 ---
 title: Bushwick Ayuda Mutua | Resources
-layout: policies
+layout: policy
 categories: policies
 permalink: /resources.html
 ---
