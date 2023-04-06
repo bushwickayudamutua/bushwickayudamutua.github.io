@@ -22,7 +22,7 @@ When the files finish uploading, you can add a commit message to describe the ch
 
 When uploading documents, always try to use lower compression settings and sizes so they'll load fast on phones and poor internet. Try to follow these file-format standards:
 - Images: use `jpg` or `png` 
-- Videos: use `mp4`
+- Video: use `mp4`
 - Audio: use `mp3`
 - Documents: use `pdf`
 - Folders of multiple files: use `zip` compression
