@@ -1,12 +1,12 @@
 ---
 title: Bushwick Ayuda Mutua | Resources
-layout: default
+layout: policies
 categories: policies
 permalink: /resources.html
 ---
 
 
-### [Food pantries in ridgewood and bushwick](/resources/food-pantries.pdf)
+### [Food pantries in Ridgewood and Bushwick](/resources/food-pantries.pdf)
 
 ### [BAM Flyer English](/resources/bam-flyer-english.pdf)
 
