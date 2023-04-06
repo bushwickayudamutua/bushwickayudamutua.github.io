@@ -1,6 +1,6 @@
 # Bushwick Ayuda Mutua
 
-This is the source code for the website of Bushwick Ayuda Mutua, located at [https://bushwickayudamutua.com/]
+This is the source code for the website of Bushwick Ayuda Mutua, located at https://bushwickayudamutua.com/.
 
 ## How to add / edit a page on the website
 
