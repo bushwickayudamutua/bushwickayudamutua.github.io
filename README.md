@@ -10,7 +10,7 @@ You can easily [add](https://docs.github.com/en/repositories/working-with-files/
 you finish making your changes, add a commit messages describing them and submit it. The website should update to reflect your changes within 5-10 minutes!
 ## How to upload resources to the website
 
-To upload documents to the `resources` directory of the website, navigate to it in Github's interface [here](/resources) and click the "Add file" button which allows you to drag-and-drop files from your computer. 
+To upload files to the `resources` directory of the website, navigate to it in Github's interface [here](/resources) and click the "Add file" button which allows you to drag-and-drop files from your computer. 
 
 Make sure to remove all spaces and other punctuation from the file names before uploading them as they can cause the resulting URLs to be difficult to share. A good standard to follow is: 
 - only use lowercase letter and numbers
