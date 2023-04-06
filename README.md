@@ -13,10 +13,10 @@ you finish making your changes, add a commit messages describing them and submit
 To upload files to the `resources` directory of the website, navigate to it in Github's interface [here](/resources) and click the "Add file" button which allows you to drag-and-drop files from your computer. 
 
 Make sure to remove all spaces and other punctuation from the file names before uploading them as they can cause the resulting URLs to be difficult to share. A good standard to follow is: 
-- only use lowercase letter and numbers
-- user the `-` symbol for spacing
-- include the document format at the end 
-- for instance: `mutual-aid-guide.pdf` 
+- Only use lowercase letters and numbers
+- Use the `-` symbol for spacing
+- Include the document format at the end 
+- For instance: `mutual-aid-guide.pdf` 
 
 When the files finish uploading, you can add a commit message to describe the changes you made.
 
