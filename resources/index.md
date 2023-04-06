@@ -5,7 +5,6 @@ categories: policies
 permalink: /resources/
 ---
 
-
 ### [Food pantries in Ridgewood and Bushwick](/resources/food-pantries.pdf)
 
 ### [BAM Flyer English](/resources/bam-flyer-english.pdf)
