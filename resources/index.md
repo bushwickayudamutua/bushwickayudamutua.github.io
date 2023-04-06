@@ -1,8 +1,8 @@
 ---
 title: Bushwick Ayuda Mutua | Resources
-layout: policy
+layout: info
 categories: policies
-permalink: /resources.html
+permalink: /resources/
 ---
 
 

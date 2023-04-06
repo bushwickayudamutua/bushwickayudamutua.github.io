@@ -1,8 +1,20 @@
 # Bushwick Ayuda Mutua
 
-This is the source code for the [`jekyll`]-based website of Bushwick Ayuda Mutua, located at [https://bushwickayudamutua.com/]
+This is the source code for the website of Bushwick Ayuda Mutua, located at [https://bushwickayudamutua.com/]
 
-### Running the site locally
+## How to add / edit a page on the website
+
+This website is built using a framework called [`jekyll`](https://jekyllrb.com/) which allows you to write human-readable [markdown](https://www.markdownguide.org/cheat-sheet/) documents which are rendered as HTML. A markdown document is just a text file with some special syntax for declaring links, lists, headers, bold text, etc. For instance, our [privacy](privacy.md), [safety](safety.md), and [calendar](calendar.md) pages are all composed in markdown. These files also include metadata at the top of the file (separated by `---`) include the `title` of the page, the `layout` (will usually be `info`), and the `permalink` which controls the URL of the resulting page.
+
+You can easily [add](https://docs.github.com/en/repositories/working-with-files/managing-files/adding-a-file-to-a-repository) and [edit](https://docs.github.com/en/repositories/working-with-files/managing-files/editing-files) markdown files in Github's interface. Once
+you finish making your changes, add a commit messages describing them and submit it. The website should update to reflect your changes within 5-10 minutes!
+## How to upload resources to the website
+
+To upload documents to the `resources` directory of the website, navigate to it in Github's interface [here](/resources) and click the "Add file" button which allows you to drag-and-drop files from your computer. Make sure to remove all spaces and other punctuation from the file names before uploading them as they can cause the resulting URLs to be difficult to share. A good standard is only using letters, numbers, the `-` symbol for spacing, and a `.` followed by the document format (for instance: `mutual-aid-guide.pdf`). When the files finish uploading, you can add a commit message to describe the changes you made.
+
+Once the files have uploaded, the will become publicly available on the website in 5-10 minutes. You can then updated the [resources page](/resources/index.md) with links and descriptions of the new documents.
+
+## How to run the site locally
 
 You'll need [node](https://nodejs.org/en/download/) for npm, and ruby and [jekyll](https://jekyllrb.com/docs/installation/macos/). We're currently running these versions:
 - `node`: `v14.18.1`
@@ -21,6 +33,6 @@ Now clone the repo, go to the folder in your terminal and run `bundle exec make 
 
 When it's running, go to [https://localhost:4000](https://localhost:4000) on your browser.
 
-### Want to Volunteer?
+## Want to Volunteer?
 
 If you'd like to get involved with BAM, [please fill out our volunteer form and we'll be in touch](https://bushwickayudamutua.com/volunteer/)!

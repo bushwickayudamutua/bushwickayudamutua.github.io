@@ -1,6 +1,6 @@
 ---
 title: Bushwick Ayuda Mutua | Safety Guidelines
-layout: policy
+layout: info
 categories: policies
 permalink: /privacy/
 ---
