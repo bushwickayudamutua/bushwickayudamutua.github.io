@@ -12,6 +12,13 @@ you finish making your changes, add a commit messages describing them and submit
 
 To upload documents to the `resources` directory of the website, navigate to it in Github's interface [here](/resources) and click the "Add file" button which allows you to drag-and-drop files from your computer. Make sure to remove all spaces and other punctuation from the file names before uploading them as they can cause the resulting URLs to be difficult to share. A good standard is only using letters, numbers, the `-` symbol for spacing, and a `.` followed by the document format (for instance: `mutual-aid-guide.pdf`). When the files finish uploading, you can add a commit message to describe the changes you made.
 
+When uploading documents always try to use lower compression settings and sizes so they'll load fast on phones and poor internet. Try to follow these file-format standards, as well:
+- Images: use `jpg` or `png` 
+- Videos: use `mp4`
+- Audio: use `mp3`
+- Documents: use `pdf`
+- Folders of multiple files: use `zip` compression
+
 Once the files have uploaded, the will become publicly available on the website in 5-10 minutes. You can then updated the [resources page](/resources/index.md) with links and descriptions of the new documents.
 
 ## How to run the site locally
