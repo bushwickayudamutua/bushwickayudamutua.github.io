@@ -10,7 +10,6 @@ github_username: bushwickayudamutua
 
 plugins:
   - jekyll-admin
-  - jekyll-get-json
 
 sass:
   load_paths:
