@@ -27,5 +27,5 @@ exclude:
   - yarn.lock
 
 jekyll_get_json:
-    data: requests
+  - data: requests
     json: https://file.baml.ink/data/open-requests.json
