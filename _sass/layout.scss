@@ -40,6 +40,7 @@ $bam-orange: #FF6E2E;
 	display: block !important;
 }
 
+
 //Carousel indicator dots
 .owl-theme .owl-dots .owl-dot span {
 	width: 18px !important;
@@ -510,7 +511,7 @@ nav {
 		}
 	}
 
-	.learn-more, .calendar {
+	.learn-more {
 		font-size: 20px;
 		text-transform: uppercase;
 	}
@@ -1243,78 +1244,5 @@ nav {
 		width: 100%;
 		height: 100%;
 		border: none;
-	}
-}
-
-
-/*****
- * Request Counter
- *****/
- .request-counter {
-	
-	h2, h3 {
-		font-family: "grifter-bold";
- 	}
-
-	 @media only screen and (max-width: 600px) {
-		h2 {
-			font-size: 24px;
-		}
-	}
- }
-
- .request-cta-container {
-	margin-bottom: 15px;
- }
-
- .request-cta {
-	font-family: "grifter-bold";
-	text-transform: uppercase;
- }
-
- .request-count {
-	font-family: "grifter-bold";
-	display: inline;
-	font-size: 48px;
- }
-
- .request-row {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	width: 100%;
-	padding-top: 15px;
-
-	@media only screen and (max-width: 600px) {
-		  flex-direction:column;
-	  }
- }
-
- .request-column {
-	display: flex;
-  	flex-direction: column;
-  	flex-basis: 100%;
-  	flex: 1;
- }
-
- .request-entry {
-	& h2 {
-		display: inline !important;
-		@media only screen and (max-width: 600px) {
-			font-size: 30px;
-		}
-	}
-
-	& .lang-text {
-		display: none;
-
-		&.active {
-			display: inline;
-			font-size: 28px;
-
-			@media only screen and (max-width: 600px) {
-				font-size: 20px;
-			}
-		}
 	}
 }

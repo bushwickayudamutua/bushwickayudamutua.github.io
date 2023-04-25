@@ -10,7 +10,6 @@ github_username: bushwickayudamutua
 
 plugins:
   - jekyll-admin
-  - jekyll-get-json
 
 sass:
   load_paths:
@@ -25,7 +24,3 @@ exclude:
   - package.json
   - package-lock.json
   - yarn.lock
-
-jekyll_get_json:
-    data: requests
-    json: https://file.baml.ink/data/open-requests.json
