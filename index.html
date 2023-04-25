@@ -23,7 +23,7 @@ categories: home
 						<div class="arrow">{% include arrowSVG.html %}</div>
 					</a>
 				</div>
-				<div class="learn-more link">
+				<div class="calendar link">
 					<a href="/calendar">
 						<span class="eng lang-text active">Calendar</span>
 						<span class="span lang-text">Calendario</span>
@@ -34,7 +34,66 @@ categories: home
 		</div>
 	</div>
 
+	<div class="request-counter container">
+		<h2 class="eng lang-text active">
+			BAM has the following number of outstanding requests in each field:
+		</h2>
+		<h2 class="span lang-text">
+			BAM tiene el siguiente número de solicitudes pendientes en cada campo:
+		</h2>
+	<div class="request-row">
+		<div class="request-column">
+			{% assign first_half = site.data.requests.metrics.size | divided_by: 2 %}
+			{% for request in site.data.requests.metrics limit: first_half %}
+			<div class="request-entry">
+				<h2 style="display: inline;" class="request-count">{{request.value}} </h2>
+				<span class="eng request-category lang-text active">for {{request.translations.eng}}</span>
+				<span class="span request-category lang-text">para {{request.translations.span}}</span>
+			</div>
+			{% endfor %}
+		</div>
+		<div class="request-column">
+			{% assign first_half = site.data.requests.metrics.size | divided_by: 2 %}
+			{% for request in site.data.requests.metrics offset: first_half %}
+			<div class="request-entry">
+				<h2 style="display: inline;" class="request-count">{{request.value}} </h2>
+				<span class="eng request-category lang-text active">for {{request.translations.eng}}</span>
+				<span class="span request-category lang-text">para {{request.translations.span}}</span>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+	
+	<br/>
+	<div class="request-cta-container">
+		<div class="link">
+			<a href="/donate-item">
+				<span class="request-cta lang-text eng active">Donate Items</span>
+				<span class="request-cta lang-text span">Donar Artículos</span>
+				<div class="arrow">{% include arrowSVG.html %}</div>
+			</a>
+		</div>
+		<div class="link">
+			<a href="https://opencollective.com/bushwick-ayuda-mutua">
+				<span class="request-cta lang-text eng active">Donate Funds</span>
+				<span class="request-cta lang-text span">Donar Fondos</span>
+				<div class="arrow">{% include arrowSVG.html %}</div>
+			</a>
+		</div>
+		<div class="link">
+			<a href="/volunteer">
+				<span class="request-cta lang-text eng active">Volunteer</span>
+				<span class="request-cta lang-text span">Voluntario</span>
+				<div class="arrow">{% include arrowSVG.html %}</div>
+			</a>	
+		</div>
+	
+	</div>
+	
+</div>
 	{% include neighbors.html %}
+
+	
 
 	<div id="network_pane">
 		<div class="container network" style="padding-bottom:5rem;">
@@ -44,6 +103,8 @@ categories: home
 			</div>
 		</div>
 	</div>
+
+
 
 	<!-- Carousel-->
 	<div class="carousel-container">
