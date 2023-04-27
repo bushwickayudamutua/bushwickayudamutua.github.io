@@ -112,6 +112,7 @@ DEPENDENCIES
   jekyll (~> 4.2.0)
   jekyll-admin
   jekyll-feed (~> 0.12)
+  jekyll-get-json (~> 1.0)
   json
   minima (~> 2.5)
   tzinfo-data
