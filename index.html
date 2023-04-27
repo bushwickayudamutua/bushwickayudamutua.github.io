@@ -4,67 +4,52 @@ layout: default
 categories: home
 ---
 
-	<div class="d-lg-flex header-container">
-		<div class="container d-lg-flex align-items-lg-center" id="header_pane">
-			<div class="content-container">
-				<div class="title">Bushwick</br>Ayuda Mutua</div>
-				<div class="subtitle pt-3 pb-4">
-					<span class="eng lang-text active">A network of Bushwick neighbors supporting neighbors.</span>
-					<span class="span lang-text">Bushwick Ayuda Mutua es una red de vecines respaldando a vecines en Bushwick.</span>
-				</div>
-				<div class="text pt-4 pb-4">
-					<span class="eng lang-text active">We are a collective group of Bushwick residents, long-term residents and recent arrivals, rooted in the mission of creating a local network for neighbors to support neighbors.</span>
-					<span class="span lang-text">Somos une colective de residentes de Bushwick, desde aquelles que recién nos unimos a la comunidad hasta residentes de largo plazo, con la misión de crear una red de vecines ayudando a vecines.</span>
-				</div>
-				<div class="learn-more link">
-					<a href="/about">
-						<span class="eng lang-text active">Learn More</span>
-						<span class="span lang-text">Aprende Mas</span>
-						<div class="arrow">{% include arrowSVG.html %}</div>
-					</a>
-				</div>
-				<div class="calendar link">
-					<a href="/calendar">
-						<span class="eng lang-text active">Calendar</span>
-						<span class="span lang-text">Calendario</span>
-						<div class="arrow">{% include arrowSVG.html %}</div>
-					</a>
-				</div>
+<div class="d-lg-flex header-container">
+	<div class="container d-lg-flex align-items-lg-center" id="header_pane">
+		<div class="content-container">
+			<div class="title">Bushwick</br>Ayuda Mutua</div>
+			<div class="subtitle pt-3 pb-4">
+				<span class="eng lang-text active">A network of Bushwick neighbors supporting neighbors.</span>
+				<span class="span lang-text">Bushwick Ayuda Mutua es una red de vecines respaldando a vecines en
+					Bushwick.</span>
+			</div>
+			<div class="text pt-4 pb-4">
+				<span class="eng lang-text active">We are a collective group of Bushwick residents, long-term residents
+					and recent arrivals, rooted in the mission of creating a local network for neighbors to support
+					neighbors.</span>
+				<span class="span lang-text">Somos une colective de residentes de Bushwick, desde aquelles que recién
+					nos unimos a la comunidad hasta residentes de largo plazo, con la misión de crear una red de vecines
+					ayudando a vecines.</span>
+			</div>
+			<div class="learn-more link">
+				<a href="/about">
+					<span class="eng lang-text active">Learn More</span>
+					<span class="span lang-text">Aprende Mas</span>
+					<div class="arrow">{% include arrowSVG.html %}</div>
+				</a>
+			</div>
+			<div class="calendar link">
+				<a href="/calendar">
+					<span class="eng lang-text active">Calendar</span>
+					<span class="span lang-text">Calendario</span>
+					<div class="arrow">{% include arrowSVG.html %}</div>
+				</a>
 			</div>
 		</div>
+	</div>
+</div>
+
+<div class="request-counter container">
+	<h2 class="eng lang-text active">
+		BAM has the following number of outstanding requests in each field:
+	</h2>
+	<h2 class="span lang-text">
+		BAM tiene el siguiente número de solicitudes pendientes en cada campo:
+	</h2>
+	<div id="requests-counter-container" class="request-row">
 	</div>
 
-	<div class="request-counter container">
-		<h2 class="eng lang-text active">
-			BAM has the following number of outstanding requests in each field:
-		</h2>
-		<h2 class="span lang-text">
-			BAM tiene el siguiente número de solicitudes pendientes en cada campo:
-		</h2>
-	<div class="request-row">
-		<div class="request-column">
-			{% assign first_half = site.data.requests.metrics.size | divided_by: 2 %}
-			{% for request in site.data.requests.metrics limit: first_half %}
-			<div class="request-entry">
-				<h2 style="display: inline;" class="request-count">{{request.value}} </h2>
-				<span class="eng request-category lang-text active">for {{request.translations.eng}}</span>
-				<span class="span request-category lang-text">para {{request.translations.span}}</span>
-			</div>
-			{% endfor %}
-		</div>
-		<div class="request-column">
-			{% assign first_half = site.data.requests.metrics.size | divided_by: 2 %}
-			{% for request in site.data.requests.metrics offset: first_half %}
-			<div class="request-entry">
-				<h2 style="display: inline;" class="request-count">{{request.value}} </h2>
-				<span class="eng request-category lang-text active">for {{request.translations.eng}}</span>
-				<span class="span request-category lang-text">para {{request.translations.span}}</span>
-			</div>
-			{% endfor %}
-		</div>
-	</div>
-	
-	<br/>
+	<br />
 	<div class="request-cta-container">
 		<div class="link">
 			<a href="/donate-item">
@@ -85,220 +70,239 @@ categories: home
 				<span class="request-cta lang-text eng active">Volunteer</span>
 				<span class="request-cta lang-text span">Voluntario</span>
 				<div class="arrow">{% include arrowSVG.html %}</div>
-			</a>	
+			</a>
 		</div>
-	
+
 	</div>
-	
+
 </div>
-	{% include neighbors.html %}
+{% include neighbors.html %}
 
-	
 
-	<div id="network_pane">
-		<div class="container network" style="padding-bottom:5rem;">
-			<div class="comment-text network">
-				<span class="eng lang-text active">A network of Bushwick neighbors supporting neighbors.</span>
-				<span class="span lang-text">Una red de vecenes en Bushwick apoyando a vecines.</span>
-			</div>
+
+<div id="network_pane">
+	<div class="container network" style="padding-bottom:5rem;">
+		<div class="comment-text network">
+			<span class="eng lang-text active">A network of Bushwick neighbors supporting neighbors.</span>
+			<span class="span lang-text">Una red de vecenes en Bushwick apoyando a vecines.</span>
 		</div>
 	</div>
+</div>
 
 
 
-	<!-- Carousel-->
-	<div class="carousel-container">
-		<div id="pics_spinner" class="spinner-border" role="status">
-			<span class="sr-only">Loading...</span>
+<!-- Carousel-->
+<div class="carousel-container">
+	<div id="pics_spinner" class="spinner-border" role="status">
+		<span class="sr-only">Loading...</span>
+	</div>
+	<div id="pics_carousel" class="owl-carousel owl-theme">
+		<div class="item">
+			<div class="item-inner">
+				<div class="item-bg">
+					<img src="./assets/carousel/carousel1.jpg">
+				</div>
+				<div class="img-outer-container">
+					<img src="" data-src="./assets/carousel/carousel1.jpg">
+				</div>
+			</div>
 		</div>
-		<div id="pics_carousel" class="owl-carousel owl-theme">
-			<div class="item">
-				<div class="item-inner">
-					<div class="item-bg">
-						<img src="./assets/carousel/carousel1.jpg">
-					</div>
-					<div class="img-outer-container">
-						<img src="" data-src="./assets/carousel/carousel1.jpg">
-					</div>
+		<div class="item">
+			<div class="item-inner">
+				<div class="item-bg">
+					<img src="./assets/carousel/carousel2.jpg">
+				</div>
+				<div class="img-outer-container">
+					<img src="" data-src="./assets/carousel/carousel2.jpg">
 				</div>
 			</div>
-			<div class="item">
-				<div class="item-inner">
-					<div class="item-bg">
-						<img src="./assets/carousel/carousel2.jpg">
-					</div>
-					<div class="img-outer-container">
-						<img src="" data-src="./assets/carousel/carousel2.jpg">
-					</div>
+		</div>
+		<div class="item">
+			<div class="item-inner">
+				<div class="item-bg">
+					<img src="./assets/carousel/carousel3.jpg">
+				</div>
+				<div class="img-outer-container">
+					<img src="" data-src="./assets/carousel/carousel3.jpg">
 				</div>
 			</div>
-			<div class="item">
-				<div class="item-inner">
-					<div class="item-bg">
-						<img src="./assets/carousel/carousel3.jpg">
-					</div>
-					<div class="img-outer-container">
-						<img src="" data-src="./assets/carousel/carousel3.jpg">
-					</div>
+		</div>
+		<div class="item">
+			<div class="item-inner">
+				<div class="item-bg">
+					<img src="./assets/carousel/carousel4.jpg">
+				</div>
+				<div class="img-outer-container">
+					<img src="" data-src="./assets/carousel/carousel4.jpg">
 				</div>
 			</div>
-			<div class="item">
-				<div class="item-inner">
-					<div class="item-bg">
-						<img src="./assets/carousel/carousel4.jpg">
-					</div>
-					<div class="img-outer-container">
-						<img src="" data-src="./assets/carousel/carousel4.jpg">
-					</div>
+		</div>
+		<div class="item">
+			<div class="item-inner">
+				<div class="item-bg">
+					<img src="./assets/carousel/carousel5.JPG">
+				</div>
+				<div class="img-outer-container">
+					<img src="" data-src="./assets/carousel/carousel5.JPG">
 				</div>
 			</div>
-			<div class="item">
-				<div class="item-inner">
-					<div class="item-bg">
-						<img src="./assets/carousel/carousel5.JPG">
-					</div>
-					<div class="img-outer-container">
-						<img src="" data-src="./assets/carousel/carousel5.JPG">
-					</div>
+		</div>
+		<div class="item">
+			<div class="item-inner">
+				<div class="item-bg">
+					<img src="./assets/carousel/carousel6.JPG">
 				</div>
-			</div>
-			<div class="item">
-				<div class="item-inner">
-					<div class="item-bg">
-						<img src="./assets/carousel/carousel6.JPG">
-					</div>
-					<div class="img-outer-container">
-						<img src="" data-src="./assets/carousel/carousel6.JPG">
-						<!-- <div class="spinner-border" role="status">
+				<div class="img-outer-container">
+					<img src="" data-src="./assets/carousel/carousel6.JPG">
+					<!-- <div class="spinner-border" role="status">
 							<span class="sr-only">Loading...</span>
 						</div> -->
-					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+</div>
 
 
-	<!-- Requests -->
-	<div class="requests" style="margin-bottom:150px;">
-		<!-- <div class="logo" id="hands_mobile">
+<!-- Requests -->
+<div class="requests" style="margin-bottom:150px;">
+	<!-- <div class="logo" id="hands_mobile">
 			<img src="/assets/images/hands.svg"/>
 		</div> -->
-		<div class="container request pt-5 pb-5" id="volunteer">
-			<div class="logo">
-				<img src="/assets/images/globe.svg"/>
+	<div class="container request pt-5 pb-5" id="volunteer">
+		<div class="logo">
+			<img src="/assets/images/globe.svg" />
+		</div>
+		<div class="text-container">
+			<div class="title pb-3">
+				<span class="lang-text eng active">
+					Sign up to <a class="underline" href="/volunteer/">volunteer</a>
+				</span>
+				<span class="lang-text span">
+					Como inscribirse como <a class="underline" href="/volunteer/">voluntarie</a>
+				</span>
 			</div>
+			<p class="text pb-3">
+				<span class="lang-text eng active">
+					We are always looking for more neighbors to support our mission. From on-site food handling to
+					connecting with folks in need of assistance, PR, awareness building, fundraising, finance, and tech
+					- tell us about you and how you can help.
+				</span>
+				<span class="lang-text span">
+					Siempre estamos buscando el apoyo de más vecines que comparten nuestra misma misión. Necesitamos
+					apoyo en distribución de víveres, comunicación con vecines, aquelles con experiencia en relaciones
+					públicas, recaudación de fondos, finanzas y personas con experiencia en tecnología— ¡cuéntanos sobre
+					ti y cómo puedes apoyar nuestro esfuerzo!
+				</span>
+			</p>
+			<div class="link">
+				<a href="/volunteer/">
+					<span class="lang-text eng active">Get Involved</span>
+					<span class="lang-text span">Involúcrate</span>
+					<div class="arrow">{% include arrowSVG.html %}</div>
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="logo" id="hands_mobile">
+		<img src="/assets/images/hands.svg" />
+	</div>
+	<div class="container request pt-5 pb-5" id="assistance">
+		<div class="logo" id="hands_desktop">
+			<img src="/assets/images/hands.svg" />
+		</div>
+		<div class="text-container">
+			<div class="title pb-3">
+				<span class="eng lang-text active">
+					Get <a target="_blank" class="underline" href="https://bit.ly/BAMrequest">assistance</a>
+				</span>
+				<span class="span lang-text">
+					Cómo recibir <a target="_blank" class="underline" href="https://bit.ly/BAMrequest">asistencia</a>
+				</span>
+			</div>
+			<p class="text pb-3">
+				<span class="eng lang-text active">
+					We offer food assistance and access to essential items like menstrual products, soap, diapers, and
+					baby food. We make referrals to organizations we trust can support you in legal support, housing
+					assistance, medical assistance, and more.
+				</span>
+				<span class="span lang-text">
+					Ofrecemos asistencia de víveres y acceso a artículos esenciales como productos femeninos, jabón,
+					pañales, y comida para bebés. También ofrecemos referencias a otras organizaciones en las cuales
+					confiamos que puedan brindar apoyo legal, médico, asistencia de vivienda, entre otras necesidades.
+				</span>
+			</p>
+			<div class="link">
+				<a target="_blank" href="https://bit.ly/BAMrequest">
+					<span class="lang-text eng active">Request Help</span>
+					<span class="lang-text span">Solicite Ayuda</span>
+					<div class="arrow">{% include arrowSVG.html %}</div>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% include neighbors.html %}
+
+<!-- Carousel-->
+<div class="t-carousel-container">
+	<div id="testimony_carousel" class="owl-carousel owl-theme">
+		<div class="item container">
 			<div class="text-container">
-				<div class="title pb-3">
-					<span class="lang-text eng active">
-						Sign up to <a class="underline" href="/volunteer/">volunteer</a>
-					</span>
-					<span class="lang-text span">
-						Como inscribirse como <a class="underline" href="/volunteer/">voluntarie</a>
-					</span>
+				<div class="text">
+					<p>Living in a community where your comfort is secure and the comfort of others doesn’t matter is
+						not a community. A community only becomes a community once folks are watching out for each other
+						and are aware of each other's conditions and are able to take care of each other.</p>
 				</div>
-				<p class="text pb-3">
-					<span class="lang-text eng active">
-						We are always looking for more neighbors to support our mission. From on-site food handling to connecting with folks in need of assistance, PR, awareness building, fundraising, finance, and tech - tell us about you and how you can help.
-					</span>
-					<span class="lang-text span">
-						Siempre estamos buscando el apoyo de más vecines que comparten nuestra misma misión. Necesitamos apoyo en distribución de víveres, comunicación con vecines, aquelles con experiencia en relaciones públicas, recaudación de fondos, finanzas y personas con experiencia en tecnología— ¡cuéntanos sobre ti y cómo puedes apoyar nuestro esfuerzo!
-					</span>
-				</p>
-				<div class="link">
-					<a href="/volunteer/">
-						<span class="lang-text eng active">Get Involved</span>
-						<span class="lang-text span">Involúcrate</span>
-						<div class="arrow">{% include arrowSVG.html %}</div>
-					</a>					
+				<div class="person">
+					Maria, BAM Coordinator
 				</div>
 			</div>
 		</div>
-		<div class="logo" id="hands_mobile">
-			<img src="/assets/images/hands.svg"/>
-		</div>
-		<div class="container request pt-5 pb-5" id="assistance">
-			<div class="logo" id="hands_desktop">
-				<img src="/assets/images/hands.svg"/>
-			</div>
+
+		<div class="item container">
 			<div class="text-container">
-				<div class="title pb-3">
-					<span class="eng lang-text active">
-						Get <a target="_blank" class="underline" href="https://bit.ly/BAMrequest">assistance</a>
-					</span>
-					<span class="span lang-text">
-						Cómo recibir <a target="_blank" class="underline" href="https://bit.ly/BAMrequest">asistencia</a>
-					</span>
+				<div class="text">
+					<p>El futuro de Bushwick, lo veo como una comunidad resiliente que se cuide y se protege sola, que
+						se une para proveerse a si misma y salir adelante.</p>
 				</div>
-				<p class="text pb-3">
-					<span class="eng lang-text active">
-						We offer food assistance and access to essential items like menstrual products, soap, diapers, and baby food. We make referrals to organizations we trust can support you in legal support, housing assistance, medical assistance, and more.
-					</span>
-					<span class="span lang-text">
-						Ofrecemos asistencia de víveres y acceso a artículos esenciales como productos femeninos, jabón, pañales, y comida para bebés. También ofrecemos referencias a otras organizaciones en las cuales confiamos que puedan brindar apoyo legal, médico, asistencia de vivienda, entre otras necesidades.
-					</span>
-				</p>
-				<div class="link">
-					<a target="_blank" href="https://bit.ly/BAMrequest">
-						<span class="lang-text eng active">Request Help</span>
-						<span class="lang-text span">Solicite Ayuda</span>
-						<div class="arrow">{% include arrowSVG.html %}</div>
-					</a>
+				<div class="person">
+					Sebastian, BAM Coordinator
+				</div>
+			</div>
+		</div>
+
+		<div class="item container">
+			<div class="text-container">
+				<div class="text">
+					<p>Pues más que nada yo he visto pobreza. Más para las comunidades Hispanas, personas que no hablan
+						inglés, no tienen suficiente información de tanta ayuda y programas que ofrece la ciudad y
+						organizaciones. Pero sobre todo discriminacion hacia las personas humildes. Eso es lo que yo he
+						visto. Pero he visto también cosas buenas, en donde no importa tu color, religión de donde seas,
+						hay ayuda para todos. Eso es lo que yo he visto.</p>
+				</div>
+				<div class="person">
+					Bushwick Neighbor
+				</div>
+			</div>
+		</div>
+
+		<div class="item container">
+			<div class="text-container">
+				<div class="text">
+					<p>People from Bushwick should get more involved with the work that we are doing with BAM because
+						you know we are all neighbors, we are all in this together, but some parts of this community are
+						really hurting and need help and I think it is important to really draw together and find
+						communal strength.</p>
+				</div>
+				<div class="person">
+					Mattie, BAM Coordinator
 				</div>
 			</div>
 		</div>
 	</div>
-
-	{% include neighbors.html %}
-
-	<!-- Carousel-->
-	<div class="t-carousel-container">
-		<div id="testimony_carousel" class="owl-carousel owl-theme">
-			<div class="item container">
-				<div class="text-container">
-					<div class="text">
-						<p>Living in a community where your comfort is secure and the comfort of others doesn’t matter is not a community. A community only becomes a community once folks are watching out for each other and are aware of each other's conditions and are able to take care of each other.</p>
-					</div>
-					<div class="person">
-						Maria, BAM Coordinator
-					</div>
-				</div>
-			</div>
-
-			<div class="item container">
-				<div class="text-container">
-					<div class="text">
-						<p>El futuro de Bushwick, lo veo como una comunidad resiliente que se cuide y se protege sola, que se une para proveerse a si misma y salir adelante.</p>
-					</div>
-					<div class="person">
-						Sebastian, BAM Coordinator
-					</div>
-				</div>
-			</div> 
-
-			<div class="item container">
-				<div class="text-container">
-					<div class="text">
-						<p>Pues más que nada yo he visto pobreza. Más para las comunidades Hispanas, personas que no hablan inglés, no tienen suficiente información de tanta ayuda y programas que ofrece la ciudad y organizaciones. Pero sobre todo discriminacion hacia las personas humildes. Eso es lo que yo he visto. Pero he visto también cosas buenas, en donde no importa tu color, religión de donde seas, hay ayuda para todos. Eso es lo que yo he visto.</p>
-					</div>
-					<div class="person">
-						Bushwick Neighbor
-					</div>
-				</div>
-			</div>
-
-			<div class="item container">
-				<div class="text-container">
-					<div class="text">
-						<p>People from Bushwick should get more involved with the work that we are doing with BAM because you know we are all neighbors, we are all in this together, but some parts of this community are really hurting and need help and I think it is important to really draw together and find communal strength.</p>
-					</div>
-					<div class="person">
-						Mattie, BAM Coordinator
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+</div>
 <!-- 
 <ol>
 {% for post in site.posts %}

@@ -1,4 +1,33 @@
 $(document).ready(function(){
+    const openRequestsURL = "https://file.baml.ink/data/open-requests.json";
+    // populate requests counter on homepage by fetching data from a JSON file on S3.
+    var openRequestsDiv = document.getElementById("requests-counter-container");
+    if (openRequestsDiv != null) {
+        console.log("The element exists!")
+        $.getJSON(openRequestsURL, function(data) {
+            var metrics = data.metrics;
+            var nMetrics = metrics.length;
+            var half = Math.ceil(nMetrics / 2);
+            var firstHalf = metrics.slice(0, half);
+            var secondHalf = metrics.slice(half, nMetrics);
+            var halves = [firstHalf, secondHalf];
+            var html = '';
+            $.each(halves, function(key, half) {
+                html += '<div class="request-column">';
+                for (var i = 0; i < half.length; i++) {
+                    var request = half[i];
+                    html += "<div class='request-entry'>";
+                    html += "<h2 style='display: inline;' class='request-count'>" + request.value + " </h2>";
+                    html += "<span class='eng request-category lang-text active'>for  " + request.translations.eng + "</span>";
+                    html += "<span class='span request-category lang-text'>para  " + request.translations.span + "</span>";
+                    html += "</div>";
+                }
+                html += "</div>";
+            });
+            openRequestsDiv.innerHTML = html;
+        });
+    };
+
 
     if (localStorage.getItem('lang') !== null) {
         if (localStorage.getItem('lang') === 'span') {
