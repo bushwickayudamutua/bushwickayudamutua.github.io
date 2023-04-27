@@ -10,12 +10,8 @@ GEM
       public_suffix (>= 2.0.2, < 6.0)
     bigdecimal (3.1.4)
     colorator (1.1.0)
-<<<<<<< HEAD
     concurrent-ruby (1.2.2)
     deep_merge (1.2.2)
-=======
-    concurrent-ruby (1.1.9)
->>>>>>> c60ebe9 (Revert "added request counter to homepage")
     em-websocket (0.5.3)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0)
