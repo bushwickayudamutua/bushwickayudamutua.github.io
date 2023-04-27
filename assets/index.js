@@ -3,7 +3,6 @@ $(document).ready(function(){
     // populate requests counter on homepage by fetching data from a JSON file on S3.
     var openRequestsDiv = document.getElementById("requests-counter-container");
     if (openRequestsDiv != null) {
-        console.log("The element exists!")
         $.getJSON(openRequestsURL, function(data) {
             var metrics = data.metrics;
             var nMetrics = metrics.length;
