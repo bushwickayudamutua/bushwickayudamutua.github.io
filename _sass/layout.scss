@@ -1327,9 +1327,8 @@ nav {
 
 .iframe-container {
     position: relative;
-    padding-left: 5%;
-    padding-top: 0;
-    height: 0;
+    margin: 5px;
+    height: 100%;
 }
 
 .iframe-container iframe {

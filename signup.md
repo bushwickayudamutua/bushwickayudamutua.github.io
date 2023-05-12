@@ -1,5 +1,6 @@
 ---
 title: Bushwick Ayuda Mutua | Volunteer Signup
+layout: default
 permalink: /signup/
 ---
 
