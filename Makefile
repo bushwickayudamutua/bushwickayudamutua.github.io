@@ -1,7 +1,6 @@
 NPM := npm
 VENDOR_DIR := assets/vendor/
 SCSS_VENDOR_DIR := _sass/vendor/
-JEKYLL := jekyll
 
 install:
 	$(NPM) install --no-fund
@@ -19,4 +18,4 @@ include-npm-deps:
 	cp -R node_modules/animatewithsass $(SCSS_VENDOR_DIR)animatewithsass
 
 serve: install include-npm-deps
-	JEKYLL_ENV=production $(JEKYLL) serve --livereload
+	JEKYLL_ENV=production bundle exec jekyll serve --livereload
