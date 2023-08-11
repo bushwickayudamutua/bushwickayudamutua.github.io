@@ -73,6 +73,7 @@ categories: home
 			</a>
 		</div>
 	</div>
+
 	{% include neighbors.html %}
 
 	<div id="network_pane">
@@ -86,7 +87,67 @@ categories: home
 </div>
 
 <!-- Carousel-->
-<div class="carousel-container">
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="./assets/carousel/carousel2.jpg" alt="BAM volunteer packaging eggs">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="./assets/carousel/carousel3.jpg" alt="Two volunteers reading instructions outside Latinas Americanas">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="./assets/carousel/carousel4.jpg" alt="Volunteers packaging food for distribution">
+    </div>
+        <div class="carousel-item">
+      <img class="d-block w-100" src="./assets/carousel/carousel5.jpg" alt="Ayuda Mutua graffiti">
+    </div>
+        <div class="carousel-item">
+      <img class="d-block w-100" src="./assets/carousel/carousel6.jpg" alt="Volunteer holding bags for distribution">
+    </div>
+  </div> 
+
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+
+<!-- <div class="carousel-inner">
+  	  <div class="carousel-item active">
+      <img class="d-block w-100" src="./assets/carousel/carousel1.jpg" alt="Bags of food for distribution">
+    </div>
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="./assets/carousel/carousel2.jpg" alt="BAM volunteer packaging eggs">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="./assets/carousel/carousel3.jpg" alt="Two volunteers reading instructions outside Latinas Americanas">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="./assets/carousel/carousel4.jpg" alt="Volunteers packaging food for distribution">
+    </div>
+        <div class="carousel-item">
+      <img class="d-block w-100" src="./assets/carousel/carousel5.jpg" alt="Ayuda Mutua graffiti">
+    </div>
+        <div class="carousel-item">
+      <img class="d-block w-100" src="./assets/carousel/carousel6.jpg" alt="Volunteer holding bags for distribution">
+    </div>
+  </div> -->
+
+
+<!-- <div class="carousel-container">
 	<div id="pics_spinner" class="spinner-border" role="status">
 		<span class="sr-only">Loading...</span>
 	</div>
@@ -137,18 +198,20 @@ categories: home
 			</div>
 			<div class="img-outer-container">
 				<img src="" data-src="./assets/carousel/carousel6.JPG">
-				<!-- <div class="spinner-border" role="status">
-							<span class="sr-only">Loading...</span>
-						</div> -->
+
 			</div>
 		</div>
 	</div>
 </div>
+ -->
+
+
+
 </div>
 
 
 <!-- Requests -->
-<div class="requests" style="margin-bottom:150px;">
+<div class="requests" style="margin-bottom:150px; ">
 	<!-- <div class="logo" id="hands_mobile">
 			<img src="/assets/images/hands.svg"/>
 		</div> -->
@@ -225,10 +288,12 @@ categories: home
 		</div>
 	</div>
 </div>
-
+    
 {% include neighbors.html %}
 
 <!-- Carousel-->
+
+
 <div class="t-carousel-container">
 	<div id="testimony_carousel" class="owl-carousel owl-theme">
 		<div class="item container">
