@@ -41,6 +41,14 @@ $bam-orange: #FF6E2E;
 }
 
 //Carousel indicator dots
+
+@media screen and (min-width: 900px) {
+	.carousel-inner {
+		height: 75%;
+		margin-top: 3rem;
+	}
+}
+
 .owl-theme .owl-dots .owl-dot span {
 	width: 18px !important;
 	height: 18px !important;
