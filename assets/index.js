@@ -1,4 +1,21 @@
 $(document).ready(function(){
+    
+    const setSpanish = function() {
+        $('.lang-btn.eng').removeClass('active');
+        $('.span.lang-btn').addClass('active');
+
+        $('.lang-text.eng').removeClass('active');
+        $('.lang-text.span').addClass('active');
+    }
+
+    const setEnglish = function() { 
+        $('.span.lang-btn').removeClass('active');
+        $('.lang-btn.eng').addClass('active');
+
+        $('.lang-text.span').removeClass('active'); 
+        $('.lang-text.eng').addClass('active');
+    };
+
     const openRequestsURL = "https://file.baml.ink/data/open-requests.json";
     // populate requests counter on homepage by fetching data from a JSON file on S3.
     var openRequestsDiv = document.getElementById("requests-counter-container");
@@ -27,17 +44,27 @@ $(document).ready(function(){
         });
     };
 
-
+    // determine default language from navigator.languages
     if (localStorage.getItem('lang') !== null) {
         if (localStorage.getItem('lang') === 'span') {
-            $('.lang-btn.eng').removeClass('active');
-            $('.span.lang-btn').addClass('active');
-
-            $('.lang-text.eng').removeClass('active');
-            $('.lang-text.span').addClass('active');
+            // set spanish
+            setSpanish();
+        }
+        else if (localStorage.getItem('lang') == 'eng') {
+            // set english
+            setEnglish();
         }
     } else {
-        localStorage.setItem('lang', 'eng');
+        console.log("HERE!")
+        if (navigator.languages[0].startsWith('es')) {
+            localStorage.setItem('lang', 'span');
+            // set spanish
+            setSpanish();
+        } else {
+            // set english
+            localStorage.setItem('lang', 'eng');
+            setEnglish();
+        }
     }
 
     var imgPromises = [];
@@ -147,20 +174,12 @@ $(document).ready(function(){
     //English/Spanish toggle
     $('.eng.lang-btn').on('click', () => {
         localStorage.setItem('lang', 'eng');
-        $('.span.lang-btn').removeClass('active');
-        $('.lang-btn.eng').addClass('active');
-        
-        $('.lang-text.span').removeClass('active');
-        $('.lang-text.eng').addClass('active');
+        setEnglish();
     });
 
     $('.span.lang-btn').on('click', () => {
         localStorage.setItem('lang', 'span');
-        $('.lang-btn.eng').removeClass('active');
-        $('.span.lang-btn').addClass('active');
-
-        $('.lang-text.eng').removeClass('active');
-        $('.lang-text.span').addClass('active');
+        setSpanish();
     });
 
     //Nav dropdown
