@@ -1,6 +1,7 @@
 $(document).ready(function(){
     
     const setSpanish = function() {
+        localStorage.setItem('lang', 'span');
         $('.lang-btn.eng').removeClass('active');
         $('.span.lang-btn').addClass('active');
 
@@ -9,6 +10,7 @@ $(document).ready(function(){
     }
 
     const setEnglish = function() { 
+        localStorage.setItem('lang', 'eng');
         $('.span.lang-btn').removeClass('active');
         $('.lang-btn.eng').addClass('active');
 
@@ -55,14 +57,11 @@ $(document).ready(function(){
             setEnglish();
         }
     } else {
-        console.log("HERE!")
         if (navigator.languages[0].startsWith('es')) {
-            localStorage.setItem('lang', 'span');
             // set spanish
             setSpanish();
         } else {
             // set english
-            localStorage.setItem('lang', 'eng');
             setEnglish();
         }
     }
@@ -173,12 +172,10 @@ $(document).ready(function(){
 
     //English/Spanish toggle
     $('.eng.lang-btn').on('click', () => {
-        localStorage.setItem('lang', 'eng');
         setEnglish();
     });
 
     $('.span.lang-btn').on('click', () => {
-        localStorage.setItem('lang', 'span');
         setSpanish();
     });
 
