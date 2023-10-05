@@ -18,6 +18,10 @@ $(document).ready(function(){
         $('.lang-text.eng').addClass('active');
     };
 
+    const getDefaultLanguage = function () {
+        return navigator.languages ? navigator.languages[0] : (navigator.language || navigator.userLanguage);
+    }
+
     const openRequestsURL = "https://file.baml.ink/data/open-requests.json";
     // populate requests counter on homepage by fetching data from a JSON file on S3.
     var openRequestsDiv = document.getElementById("requests-counter-container");
@@ -57,7 +61,8 @@ $(document).ready(function(){
             setEnglish();
         }
     } else {
-        if (navigator.languages[0].startsWith('es')) {
+        const defaultLanguage = getDefaultLanguage();
+        if (defaultLanguage.startsWith('es')) {
             // set spanish
             setSpanish();
         } else {
