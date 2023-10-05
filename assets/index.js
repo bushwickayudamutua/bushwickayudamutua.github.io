@@ -19,38 +19,11 @@ $(document).ready(function(){
     };
 
     const getDefaultLanguage = function () {
+        // determine default language from navigator.languages
         return navigator.languages ? navigator.languages[0] : (navigator.language || navigator.userLanguage);
     }
 
-    const openRequestsURL = "https://file.baml.ink/data/open-requests.json";
-    // populate requests counter on homepage by fetching data from a JSON file on S3.
-    var openRequestsDiv = document.getElementById("requests-counter-container");
-    if (openRequestsDiv != null) {
-        $.getJSON(openRequestsURL, function(data) {
-            var metrics = data.metrics;
-            var nMetrics = metrics.length;
-            var half = Math.ceil(nMetrics / 2);
-            var firstHalf = metrics.slice(0, half);
-            var secondHalf = metrics.slice(half, nMetrics);
-            var halves = [firstHalf, secondHalf];
-            var html = '';
-            $.each(halves, function(key, half) {
-                html += '<div class="request-column">';
-                for (var i = 0; i < half.length; i++) {
-                    var request = half[i];
-                    html += "<div class='request-entry'>";
-                    html += "<h2 style='display: inline;' class='request-count'>" + request.value + " </h2>";
-                    html += "<span class='eng request-category lang-text active'>for  " + request.translations.eng + "</span>";
-                    html += "<span class='span request-category lang-text'>para  " + request.translations.span + "</span>";
-                    html += "</div>";
-                }
-                html += "</div>";
-            });
-            openRequestsDiv.innerHTML = html;
-        });
-    };
-
-    // determine default language from navigator.languages
+    // set language based on local storage / navigator.language(s)
     if (localStorage.getItem('lang') !== null) {
         if (localStorage.getItem('lang') === 'span') {
             // set spanish
@@ -70,6 +43,40 @@ $(document).ready(function(){
             setEnglish();
         }
     }
+
+    // populate requests counter on homepage by fetching data from a JSON file on Digital Ocean Spaces.
+    const openRequestsURL = "https://file.baml.ink/data/open-requests.json";
+    var openRequestsDiv = document.getElementById("requests-counter-container");
+    if (openRequestsDiv != null) {
+        $.getJSON(openRequestsURL, function(data) {
+            var metrics = data.metrics;
+            var nMetrics = metrics.length;
+            var half = Math.ceil(nMetrics / 2);
+            var firstHalf = metrics.slice(0, half);
+            var secondHalf = metrics.slice(half, nMetrics);
+            var halves = [firstHalf, secondHalf];
+            var html = '';
+            $.each(halves, function(key, half) {
+                html += '<div class="request-column">';
+                for (var i = 0; i < half.length; i++) {
+                    var request = half[i];
+                    html += "<div class='request-entry'>";
+                    html += "<h2 style='display: inline;' class='request-count'>" + request.value + " </h2>";
+                    if (localStorage.getItem('lang') === 'span') {
+                        html += "<span class='span request-category lang-text active'>para  " + request.translations.span + "</span>";
+                        html += "<span class='eng request-category lang-text'>for  " + request.translations.eng + "</span>";
+                    } else {
+                        html += "<span class='span request-category lang-text'>para  " + request.translations.span + "</span>";
+                        html += "<span class='eng request-category lang-text active'>for  " + request.translations.eng + "</span>"; 
+                    }
+                    html += "</div>";
+                }
+                html += "</div>";
+            });
+            openRequestsDiv.innerHTML = html;
+        });
+    };
+
 
     var imgPromises = [];
     $('#pics_carousel .img-outer-container img').each(function() {
