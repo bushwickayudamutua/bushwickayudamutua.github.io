@@ -1,6 +1,6 @@
 ---
 title: Bushwick Ayuda Mutua | Volunteer
-layout: default
+layout: embed
 permalink: /volunteer/
 ---
 
