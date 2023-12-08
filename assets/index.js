@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    
+
     const setSpanish = function() {
         localStorage.setItem('lang', 'span');
         $('.lang-btn.eng').removeClass('active');
@@ -9,12 +9,12 @@ $(document).ready(function(){
         $('.lang-text.span').addClass('active');
     }
 
-    const setEnglish = function() { 
+    const setEnglish = function() {
         localStorage.setItem('lang', 'eng');
         $('.span.lang-btn').removeClass('active');
         $('.lang-btn.eng').addClass('active');
 
-        $('.lang-text.span').removeClass('active'); 
+        $('.lang-text.span').removeClass('active');
         $('.lang-text.eng').addClass('active');
     };
 
@@ -45,7 +45,7 @@ $(document).ready(function(){
     }
 
     // populate requests counter on homepage by fetching data from a JSON file on Digital Ocean Spaces.
-    const openRequestsURL = "https://file.baml.ink/data/open-requests.json";
+    const openRequestsURL = "https://file.baml.ink/website-data/open-requests.json";
     var openRequestsDiv = document.getElementById("requests-counter-container");
     if (openRequestsDiv != null) {
         $.getJSON(openRequestsURL, function(data) {
@@ -67,7 +67,7 @@ $(document).ready(function(){
                         html += "<span class='eng request-category lang-text'>for  " + request.translations.eng + "</span>";
                     } else {
                         html += "<span class='span request-category lang-text'>para  " + request.translations.span + "</span>";
-                        html += "<span class='eng request-category lang-text active'>for  " + request.translations.eng + "</span>"; 
+                        html += "<span class='eng request-category lang-text active'>for  " + request.translations.eng + "</span>";
                     }
                     html += "</div>";
                 }
@@ -102,7 +102,7 @@ $(document).ready(function(){
     // $(window).on('mousemove', function(event) {
     //     const blueCircle = $('.circle.blue');
     //     const orangeCircle = $('.circle.orange');
-        
+
     //     const x = (window.innerWidth - event.clientX)/10;
     //     const y = (window.innerHeight - event.clientY)/10;
 
