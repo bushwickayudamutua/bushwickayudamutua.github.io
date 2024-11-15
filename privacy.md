@@ -15,6 +15,7 @@ The privacy of the people in our community, including those we seek to help and 
 
 - Only information truly necessary to accomplish a help request is mandatory to provide. Information like gender identity, age, sex, nationality, religion, immigration status, or apartment number will never be logged or collected.
 - If requested, we will delete all of your data no questions asked.
+- You can opt out of texts from us at any time by replying STOP. No mobile information will be shared with third parties/affiliates for marketing/promotional purposes. All the above categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties.
 
 ## When Working With Outside Organizations & Tools
 - We will vet every tool and organization to ensure your data is protected and secure 
@@ -40,6 +41,7 @@ La privacidad de las personas de nuestra comunidad, incluidos aquellos a quienes
 ## Información Recopilada
 - Solo es obligatorio proporcionar la información verdaderamente necesaria para cumplir con una solicitud de ayuda. Nunca se registrará ni recopilará información como la identidad de género, la edad, el sexo, la nacionalidad, la religión, el estado migratorio o el número de apartamento.
 - Eliminaremos todos sus datos sin hacer preguntas si se solicita.
+- Puede optar por no recibir mensajes en cualquier momento respondiendo STOP. No se compartirá información móvil con terceros/afiliados para fines de marketing/promocionales. Todas las categorías anteriores excluyen los datos de consentimiento y la opción del originador de mensajes de texto; esta información no se compartirá con terceros.
 
 ## Organizaciones y herramientas externas
 - Examinaremos todas las herramientas y organizaciones para garantizar que sus datos estén protegidos y seguros
