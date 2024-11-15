@@ -28,7 +28,7 @@ The privacy of the people in our community, including those we seek to help and 
 - Slack : Project details
 - Google Docs: Project details 
 
-_Last edited: 11/19/2021_
+_Last edited: 11/15/2024_
 
 </div>
 
@@ -54,6 +54,6 @@ La privacidad de las personas de nuestra comunidad, incluidos aquellos a quienes
 - Slack: Detalles del proyecto
 - Google Docs: Detalles del proyecto
 
-_Última edición: 19/11/2021_
+_Última edición: 15/11/2024_
 
 </div>
