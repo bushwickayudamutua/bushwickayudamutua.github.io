@@ -16,6 +16,7 @@ The privacy of the people in our community, including those we seek to help and 
 - Only information truly necessary to accomplish a help request is mandatory to provide. Information like gender identity, age, sex, nationality, religion, immigration status, or apartment number will never be logged or collected.
 - If requested, we will delete all of your data no questions asked.
 - We use dialpad to help send out appointment information through text to many people at one time. You can opt out of automated texts from us at any time by replying STOP. 
+- By subscribing to Bushwick Ayuda Mutua SMS services, you agree to receive text messages from us. Bushwick Ayuda Mutua will send SMS messages to communicate with customers on the status of the projects they have requested to provide a better overall customer experience. For HELP, please contact us at (917) 694-3463. To opt-out of receiving messages, reply with “STOP” at any time. Message frequency may vary. Standard message and data rates may apply.
 - Please note that some volunteers may reach out to you directly to respond to your request for assistance.
 - No mobile information will be shared with third parties/affiliates for any marketing/promotional purposes.
 
