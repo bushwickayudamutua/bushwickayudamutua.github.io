@@ -31,7 +31,7 @@ The privacy of the people in our community, including those we seek to help and 
 - Slack : Project details
 - Google Docs: Project details 
 
-_Last edited: 11/15/2024_
+_Last edited: 26/03/2025_
 
 </div>
 
