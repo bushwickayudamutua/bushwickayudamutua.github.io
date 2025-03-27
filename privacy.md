@@ -45,6 +45,7 @@ La privacidad de las personas de nuestra comunidad, incluidos aquellos a quienes
 - Solo es obligatorio proporcionar la información verdaderamente necesaria para cumplir con una solicitud de ayuda. Nunca se registrará ni recopilará información como la identidad de género, la edad, el sexo, la nacionalidad, la religión, el estado migratorio o el número de apartamento.
 - Eliminaremos todos sus datos sin hacer preguntas si se solicita.
 - Utilizamos dialpad para ayudar a enviar información de cita a través de texto a muchas personas a la vez. Puede optar por no recibir nuestros mensajes automatizados en cualquier momento respondiendo a STOP.
+- Al suscribirse a los servicios de SMS de Bushwick Ayuda Mutua, acepta recibir nuestros mensajes de texto. Bushwick Ayuda Mutua enviará mensajes SMS para informar a los clientes sobre el estado de los proyectos que han solicitado y así brindar una mejor experiencia. Para obtener AYUDA, contáctenos al (917) 694-3463. Para dejar de recibir mensajes, responda "STOP" en cualquier momento. La frecuencia de los mensajes puede variar. Pueden aplicarse tarifas estándar de mensajes y datos.
 - Tenga en cuenta que algunos voluntarios pueden ponerse en contacto con usted directamente para responder a su solicitud de asistencia.
 - No se compartirá información móvil con terceros/afiliados para cualquier propósito de marketing/promoción.
 
