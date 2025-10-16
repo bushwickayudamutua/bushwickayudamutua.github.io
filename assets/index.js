@@ -51,8 +51,7 @@ $(document).ready(function () {
         $.getJSON(openRequestsURL, function (data) {
             // Filter out groceries from metrics since we no longer offer that service
             var metrics = data.metrics.filter(function(metric) {
-                return metric.translations.eng.toLowerCase() !== 'groceries' &&
-                       metric.translations.span.toLowerCase() !== 'víveres';
+                return metric.translations.eng.toLowerCase() !== 'groceries';
             });
             var nMetrics = metrics.length;
             var half = Math.ceil(nMetrics / 2);
@@ -88,8 +87,7 @@ $(document).ready(function () {
         $.getJSON(fulfilledRequestsURL, function (data) {
             // Filter out groceries from metrics since we no longer offer that service
             var metrics = data.metrics.filter(function(metric) {
-                return metric.translations.eng.toLowerCase() !== 'groceries' &&
-                       metric.translations.span.toLowerCase() !== 'víveres';
+                return metric.translations.eng.toLowerCase() !== 'groceries';
             });
             var nMetrics = metrics.length;
             var half = Math.ceil(nMetrics / 2);
