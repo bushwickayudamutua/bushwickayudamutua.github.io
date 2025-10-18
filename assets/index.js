@@ -49,7 +49,10 @@ $(document).ready(function () {
     var openRequestsDiv = document.getElementById("requests-counter-container");
     if (openRequestsDiv != null) {
         $.getJSON(openRequestsURL, function (data) {
-            var metrics = data.metrics;
+            // Filter out groceries from metrics since we no longer offer that service
+            var metrics = data.metrics.filter(function(metric) {
+                return metric.translations.eng.toLowerCase() !== 'groceries';
+            });
             var nMetrics = metrics.length;
             var half = Math.ceil(nMetrics / 2);
             var firstHalf = metrics.slice(0, half);
@@ -82,7 +85,10 @@ $(document).ready(function () {
     var fulfilledRequestsDiv = document.getElementById("fulfilled-requests-counter-container");
     if (fulfilledRequestsDiv != null) {
         $.getJSON(fulfilledRequestsURL, function (data) {
-            var metrics = data.metrics;
+            // Filter out groceries from metrics since we no longer offer that service
+            var metrics = data.metrics.filter(function(metric) {
+                return metric.translations.eng.toLowerCase() !== 'groceries';
+            });
             var nMetrics = metrics.length;
             var half = Math.ceil(nMetrics / 2);
             var firstHalf = metrics.slice(0, half);
