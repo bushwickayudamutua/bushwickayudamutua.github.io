@@ -28,7 +28,7 @@ The privacy of the people in our community, including those we seek to help and 
 
 ## Our Tools & Information Stored There
 - Airtable: Help Requests: names, addresses, phone number
-- Slack : Project details
+- Signal/WhatsApp : Project details
 - Google Docs: Project details 
 
 _Last edited: 26/03/2025_
@@ -57,7 +57,7 @@ La privacidad de las personas de nuestra comunidad, incluidos aquellos a quienes
 
 ## Nuestras herramientas e información almacenadas
 - Airtable: Solicitudes de ayuda: nombres, direcciones, número de teléfono
-- Slack: Detalles del proyecto
+- Signal/WhatsApp: Detalles del proyecto
 - Google Docs: Detalles del proyecto
 
 _Última edición: 15/11/2024_
